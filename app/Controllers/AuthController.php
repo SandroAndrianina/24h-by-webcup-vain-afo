@@ -8,7 +8,22 @@ class AuthController extends BaseController
 {
     public function index()
     {
-        return view('auth/login');
+        $page = [
+        'brand' => 'TERRA NOVA',
+        'heroPosition' => 'center',
+        'images' => [
+            'hero' => base_url('assets/images/hero.jpg'),
+            'background' => base_url('assets/images/background.jpg')
+        ],
+        'links' => [
+            'linkedin' => '#',
+            'instagram' => '#'
+        ],
+        'loginUrl' => base_url('login'),
+        'csrf' => csrf_hash(),
+        'csrfToken' => csrf_token()
+    ];
+        return view('auth/login', ['page' => $page]);
     }
 
     public function login()
@@ -32,7 +47,7 @@ class AuthController extends BaseController
             ->getRowArray();
 
         session()->regenerate();
-        
+
         session()->set([
             'user_id'   => $user['id'],
             'name'      => $user['name'],

@@ -23,10 +23,12 @@
 
           <div class="form-stack">
             <form class="form login-form" :class="{ 'is-active': mode === 'login' }" :aria-hidden="mode !== 'login'" :inert="mode !== 'login'" novalidate @submit.prevent="submit">
-              <input v-model.trim="form.email" type="email" autocomplete="email" :placeholder="t('email')" :aria-label="t('email')">
-              <input v-model="form.password" type="password" autocomplete="current-password" :placeholder="t('password')" :aria-label="t('password')">
+            <?= csrf_field() ?>
+            <input v-model.trim="form.email" type="email" name="email" autocomplete="email" :placeholder="t('email')" :aria-label="t('email')">
+            <input v-model="form.password" type="password" name="password" autocomplete="current-password" :placeholder="t('password')" :aria-label="t('password')">
 
-              <div class="form__row">
+
+             <div class="form__row">
                 <p class="status" :class="'is-' + status.type" role="status">{{ status.key && t(status.key, status.vars) }}</p>
               </div>
 
@@ -38,11 +40,12 @@
             </form>
 
             <form class="form signup-form" :class="{ 'is-active': mode === 'signup' }" :aria-hidden="mode !== 'signup'" :inert="mode !== 'signup'" novalidate @submit.prevent="submitSignup">
+              <?= csrf_field() ?>
               <h2 class="form__title">{{ t('signupTitle') }}</h2>
-              <input v-model.trim="signupForm.name" type="text" autocomplete="name" :placeholder="t('name')" :aria-label="t('name')">
-              <input v-model.trim="signupForm.email" type="email" autocomplete="email" :placeholder="t('email')" :aria-label="t('email')">
-              <input v-model="signupForm.password" type="password" autocomplete="new-password" :placeholder="t('password')" :aria-label="t('password')">
-              <input v-model="signupForm.confirmPassword" type="password" autocomplete="new-password" :placeholder="t('confirmPassword')" :aria-label="t('confirmPassword')">
+              <input v-model.trim="signupForm.name" type="text" name="name" autocomplete="name" :placeholder="t('name')" :aria-label="t('name')">
+              <input v-model.trim="signupForm.email" type="email" name="email" autocomplete="email" :placeholder="t('email')" :aria-label="t('email')">
+              <input v-model="signupForm.password" type="password" name="password" autocomplete="new-password" :placeholder="t('password')" :aria-label="t('password')">
+              <input v-model="signupForm.confirmPassword" type="password"  autocomplete="new-password" :placeholder="t('confirmPassword')" :aria-label="t('confirmPassword')">
 
               <div class="form__row">
                 <p class="status" :class="'is-' + status.type" role="status">{{ status.key && t(status.key, status.vars) }}</p>

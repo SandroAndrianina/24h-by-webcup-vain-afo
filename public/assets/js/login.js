@@ -73,43 +73,50 @@ createApp({
       shape()
     }
 
-    async function login(email, password) {
-      const res = await fetch(CFG.loginUrl, {
-        method: 'POST', credentials: 'same-origin',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json',
-                   'X-Requested-With': 'XMLHttpRequest', [CFG.csrfHeader]: csrf },
-        body: JSON.stringify({ email, password }),
-      })
-      const data = await res.json().catch(() => null)
-      if (data?.csrf) csrf = data.csrf
-      return { ok: res.ok && data?.ok === true, status: res.status, data }
-    }
-
-    async function submit() {
+    function submit() {
       if (loading.value) return
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) return setStatus('error', 'errEmail')
-      if (!form.password) return setStatus('error', 'errPass')
-      loading.value = true
-      setStatus()
-      try {
-        const r = await login(form.email, form.password)
-        if (r.ok) setStatus('success', 'ok', { name: r.data.user.name })
-        else if (r.status === 403) setStatus('error', 'errCsrf')
-        else setStatus('error', r.data?.error === 'too_many_attempts' ? 'errMany' : 'errBad')
-      } catch {
-        setStatus('error', 'errNet')
-      } finally {
-        loading.value = false
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+        return setStatus('error', 'errEmail')
       }
+
+      if (!form.password) {
+        return setStatus('error', 'errPass')
+      }
+
+      const loginForm = document.querySelector('.login-form')
+
+      loginForm.action = CFG.loginUrl
+      loginForm.method = 'POST'
+
+      loginForm.submit()
     }
 
     function submitSignup() {
       if (loading.value) return
-      if (!signupForm.name) return setStatus('error', 'errName')
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(signupForm.email)) return setStatus('error', 'errEmail')
-      if (signupForm.password.length < 8) return setStatus('error', 'errPasswordLength')
-      if (signupForm.password !== signupForm.confirmPassword) return setStatus('error', 'errPasswordMatch')
-      setStatus('error', 'signupUnavailable')
+
+      if (!signupForm.name) {
+        return setStatus('error', 'errName')
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(signupForm.email)) {
+        return setStatus('error', 'errEmail')
+      }
+
+      if (signupForm.password.length < 8) {
+        return setStatus('error', 'errPasswordLength')
+      }
+
+      if (signupForm.password !== signupForm.confirmPassword) {
+        return setStatus('error', 'errPasswordMatch')
+      }
+
+      const signupFormElement = document.querySelector('.signup-form')
+
+      signupFormElement.action = '/register'
+      signupFormElement.method = 'POST'
+
+      signupFormElement.submit()
     }
     onMounted(() => {
       document.documentElement.lang = 'fr'
