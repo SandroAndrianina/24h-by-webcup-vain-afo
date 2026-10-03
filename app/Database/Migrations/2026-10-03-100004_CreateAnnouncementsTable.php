@@ -12,6 +12,7 @@ class CreateAnnouncementsTable extends Migration
             'id'           => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
             'title'        => ['type' => 'VARCHAR', 'constraint' => 200],
             'content'      => ['type' => 'TEXT'],
+            'is_alert'     => ['type' => 'TINYINT', 'constraint' => 1, 'default' => 0],
             'published_at' => ['type' => 'DATETIME', 'null' => true],
             'author_id'    => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
             'updated_at'   => ['type' => 'DATETIME', 'null' => true],

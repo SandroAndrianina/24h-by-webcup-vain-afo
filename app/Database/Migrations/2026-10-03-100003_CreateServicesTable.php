@@ -14,6 +14,7 @@ class CreateServicesTable extends Migration
             'short_description' => ['type' => 'VARCHAR', 'constraint' => 255],
             'details'           => ['type' => 'TEXT', 'null' => true],
             'icon'              => ['type' => 'VARCHAR', 'constraint' => 50, 'null' => true],
+            'image'             => ['type' => 'VARCHAR', 'constraint' => 255, 'null' => true],
             'created_at'        => ['type' => 'DATETIME', 'null' => true],
             'updated_at'        => ['type' => 'DATETIME', 'null' => true],
             'deleted_at'        => ['type' => 'DATETIME', 'null' => true],

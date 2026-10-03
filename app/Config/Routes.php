@@ -22,3 +22,10 @@ $routes->get('admin',           'AdminController::index',   ['filter' => 'admin'
 $routes->get('agent',           'AgentController::index',   ['filter' => 'agent']);
 $routes->get('citoyen',         'CitoyenController::index', ['filter' => 'auth']);
 $routes->get('admin/dashboard', 'DashboardAdmin::index');
+
+$routes->get('announcements',      'Announcements::index');
+$routes->get('announcements/(:num)', 'Announcements::show/$1');
+
+$routes->get('services/(:num)', 'Service::show/$1');
+
+$routes->get('lang/(:segment)', 'Locale::switch/$1');

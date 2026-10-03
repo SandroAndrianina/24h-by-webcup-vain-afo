@@ -894,3 +894,831 @@ INFO - 2026-10-03 19:07:16 --> CSRF token verified.
 INFO - 2026-10-03 19:07:23 --> CSRF token verified.
 DEBUG - 2026-10-03 19:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-10-03 19:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-03 22:00:10 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: menu]
+in APPPATH/Views/menu_page.php on line 6.
+ 1 APPPATH/Views/menu_page.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php', 6)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 5 APPPATH/Controllers/Menu.php(17): view('menu_page', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+CRITICAL - 2026-10-03 22:00:13 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: menu]
+in APPPATH/Views/menu_page.php on line 6.
+ 1 APPPATH/Views/menu_page.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php', 6)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 5 APPPATH/Controllers/Menu.php(17): view('menu_page', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+CRITICAL - 2026-10-03 22:08:07 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: menu]
+in APPPATH/Views/menu_page.php on line 6.
+ 1 APPPATH/Views/menu_page.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php', 6)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 5 APPPATH/Controllers/Menu.php(17): view('menu_page', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+CRITICAL - 2026-10-03 22:08:09 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: menu]
+in APPPATH/Views/menu_page.php on line 6.
+ 1 APPPATH/Views/menu_page.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php', 6)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 5 APPPATH/Controllers/Menu.php(17): view('menu_page', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+CRITICAL - 2026-10-03 22:08:11 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: menu]
+in APPPATH/Views/menu_page.php on line 6.
+ 1 APPPATH/Views/menu_page.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php', 6)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 5 APPPATH/Controllers/Menu.php(17): view('menu_page', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+CRITICAL - 2026-10-03 22:13:24 --> ParseError: syntax error, unexpected token ">"
+[Method: GET, Route: menu]
+in APPPATH/Controllers/Menu.php on line 25.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Controllers/Menu.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Menu')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Menu')
+ 4 SYSTEMPATH/Router/Router.php(790): class_exists('\\App\\Controllers\\Menu')
+ 5 SYSTEMPATH/Router/Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH/CodeIgniter.php(852): CodeIgniter\Router\Router->handle('menu')
+ 7 SYSTEMPATH/CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+ERROR - 2026-10-03 22:22:02 --> Unknown column 'image' in 'INSERT INTO'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:22:02\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:22:02\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:22:02\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:22:02\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:22:02\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:22:02\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:22:02\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:22:02\'), (\'2026-10-03 22:22:02\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:22:02\')', null, false)
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH/Database/Seeds/ServiceSeeder.php(57): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\ServiceSeeder->run()
+ 8 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\ServiceSeeder')
+ 9 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 22:26:15 --> Duplicate entry 'admin' for key 'code'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `roles` (`code`, `label`)
+VALUES (\'admin\',\'Administrateur\'), (\'agent\',\'Agent municipal\'), (\'citoyen\',\'Citoyen\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `roles` (`code`, `label`)
+VALUES (\'admin\',\'Administrateur\'), (\'agent\',\'Agent municipal\'), (\'citoyen\',\'Citoyen\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `roles` (`code`, `label`)
+VALUES (\'admin\',\'Administrateur\'), (\'agent\',\'Agent municipal\'), (\'citoyen\',\'Citoyen\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `roles` (`code`, `label`)
+VALUES (\'admin\',\'Administrateur\'), (\'agent\',\'Agent municipal\'), (\'citoyen\',\'Citoyen\')', null, false)
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH/Database/Seeds/RoleSeeder.php(11): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\RoleSeeder->run()
+ 8 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\RoleSeeder')
+ 9 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 22:26:16 --> Duplicate entry 'admin@terranova.test' for key 'email'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `users` (`created_at`, `deleted_at`, `email`, `name`, `password_hash`, `role_id`, `updated_at`)
+VALUES (\'2026-09-03 22:26:16\',NULL,\'admin@terranova.test\',\'Admin Terra Nova\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'1\',\'2026-09-03 22:26:16\'), (\'2026-09-05 22:26:16\',NULL,\'agent1@terranova.test\',\'Hery Rakoto\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'2\',\'2026-09-05 22:26:16\'), (\'2026-09-05 22:26:16\',NULL,\'agent2@terranova.test\',\'Naina Rasoa\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'2\',\'2026-09-05 22:26:16\'), (\'2026-09-19 22:26:16\',NULL,\'citoyen1@terranova.test\',\'Rado Andria\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-19 22:26:16\'), (\'2026-09-23 22:26:16\',NULL,\'citoyen2@terranova.test\',\'Lala Ravelo\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-23 22:26:16\'), (\'2026-09-28 22:26:16\',NULL,\'citoyen3@terranova.test\',\'Tojo Randria\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-28 22:26:16\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`created_at`, `deleted_at`, `email`, `name`, `password_hash`, `role_id`, `updated_at`)
+VALUES (\'2026-09-03 22:26:16\',NULL,\'admin@terranova.test\',\'Admin Terra Nova\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'1\',\'2026-09-03 22:26:16\'), (\'2026-09-05 22:26:16\',NULL,\'agent1@terranova.test\',\'Hery Rakoto\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'2\',\'2026-09-05 22:26:16\'), (\'2026-09-05 22:26:16\',NULL,\'agent2@terranova.test\',\'Naina Rasoa\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'2\',\'2026-09-05 22:26:16\'), (\'2026-09-19 22:26:16\',NULL,\'citoyen1@terranova.test\',\'Rado Andria\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-19 22:26:16\'), (\'2026-09-23 22:26:16\',NULL,\'citoyen2@terranova.test\',\'Lala Ravelo\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-23 22:26:16\'), (\'2026-09-28 22:26:16\',NULL,\'citoyen3@terranova.test\',\'Tojo Randria\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-28 22:26:16\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`created_at`, `deleted_at`, `email`, `name`, `password_hash`, `role_id`, `updated_at`)
+VALUES (\'2026-09-03 22:26:16\',NULL,\'admin@terranova.test\',\'Admin Terra Nova\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'1\',\'2026-09-03 22:26:16\'), (\'2026-09-05 22:26:16\',NULL,\'agent1@terranova.test\',\'Hery Rakoto\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'2\',\'2026-09-05 22:26:16\'), (\'2026-09-05 22:26:16\',NULL,\'agent2@terranova.test\',\'Naina Rasoa\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'2\',\'2026-09-05 22:26:16\'), (\'2026-09-19 22:26:16\',NULL,\'citoyen1@terranova.test\',\'Rado Andria\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-19 22:26:16\'), (\'2026-09-23 22:26:16\',NULL,\'citoyen2@terranova.test\',\'Lala Ravelo\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-23 22:26:16\'), (\'2026-09-28 22:26:16\',NULL,\'citoyen3@terranova.test\',\'Tojo Randria\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-28 22:26:16\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`created_at`, `deleted_at`, `email`, `name`, `password_hash`, `role_id`, `updated_at`)
+VALUES (\'2026-09-03 22:26:16\',NULL,\'admin@terranova.test\',\'Admin Terra Nova\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'1\',\'2026-09-03 22:26:16\'), (\'2026-09-05 22:26:16\',NULL,\'agent1@terranova.test\',\'Hery Rakoto\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'2\',\'2026-09-05 22:26:16\'), (\'2026-09-05 22:26:16\',NULL,\'agent2@terranova.test\',\'Naina Rasoa\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'2\',\'2026-09-05 22:26:16\'), (\'2026-09-19 22:26:16\',NULL,\'citoyen1@terranova.test\',\'Rado Andria\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-19 22:26:16\'), (\'2026-09-23 22:26:16\',NULL,\'citoyen2@terranova.test\',\'Lala Ravelo\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-23 22:26:16\'), (\'2026-09-28 22:26:16\',NULL,\'citoyen3@terranova.test\',\'Tojo Randria\',\'$2y$12$3GtdWojSHUAJziYhzXK1CuagPC06U9ajsIf1TK3i6yocbUv5ffth6\',\'3\',\'2026-09-28 22:26:16\')', null, false)
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH/Database/Seeds/UserSeeder.php(41): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\UserSeeder')
+ 9 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 22:26:16 --> Unknown column 'image' in 'INSERT INTO'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:26:16\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:26:16\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:26:16\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:26:16\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:26:16\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:26:16\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:26:16\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:26:16\'), (\'2026-10-03 22:26:16\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:26:16\')', null, false)
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH/Database/Seeds/ServiceSeeder.php(57): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\ServiceSeeder->run()
+ 8 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\ServiceSeeder')
+ 9 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 22:30:41 --> Duplicate entry 'admin' for key 'code'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `roles` (`code`, `label`)
+VALUES (\'admin\',\'Administrateur\'), (\'agent\',\'Agent municipal\'), (\'citoyen\',\'Citoyen\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `roles` (`code`, `label`)
+VALUES (\'admin\',\'Administrateur\'), (\'agent\',\'Agent municipal\'), (\'citoyen\',\'Citoyen\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `roles` (`code`, `label`)
+VALUES (\'admin\',\'Administrateur\'), (\'agent\',\'Agent municipal\'), (\'citoyen\',\'Citoyen\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `roles` (`code`, `label`)
+VALUES (\'admin\',\'Administrateur\'), (\'agent\',\'Agent municipal\'), (\'citoyen\',\'Citoyen\')', null, false)
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH/Database/Seeds/RoleSeeder.php(11): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\RoleSeeder->run()
+ 8 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\RoleSeeder')
+ 9 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 22:30:42 --> Duplicate entry 'admin@terranova.test' for key 'email'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `users` (`created_at`, `deleted_at`, `email`, `name`, `password_hash`, `role_id`, `updated_at`)
+VALUES (\'2026-09-03 22:30:42\',NULL,\'admin@terranova.test\',\'Admin Terra Nova\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'1\',\'2026-09-03 22:30:42\'), (\'2026-09-05 22:30:42\',NULL,\'agent1@terranova.test\',\'Hery Rakoto\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'2\',\'2026-09-05 22:30:42\'), (\'2026-09-05 22:30:42\',NULL,\'agent2@terranova.test\',\'Naina Rasoa\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'2\',\'2026-09-05 22:30:42\'), (\'2026-09-19 22:30:42\',NULL,\'citoyen1@terranova.test\',\'Rado Andria\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-19 22:30:42\'), (\'2026-09-23 22:30:42\',NULL,\'citoyen2@terranova.test\',\'Lala Ravelo\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-23 22:30:42\'), (\'2026-09-28 22:30:42\',NULL,\'citoyen3@terranova.test\',\'Tojo Randria\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-28 22:30:42\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`created_at`, `deleted_at`, `email`, `name`, `password_hash`, `role_id`, `updated_at`)
+VALUES (\'2026-09-03 22:30:42\',NULL,\'admin@terranova.test\',\'Admin Terra Nova\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'1\',\'2026-09-03 22:30:42\'), (\'2026-09-05 22:30:42\',NULL,\'agent1@terranova.test\',\'Hery Rakoto\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'2\',\'2026-09-05 22:30:42\'), (\'2026-09-05 22:30:42\',NULL,\'agent2@terranova.test\',\'Naina Rasoa\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'2\',\'2026-09-05 22:30:42\'), (\'2026-09-19 22:30:42\',NULL,\'citoyen1@terranova.test\',\'Rado Andria\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-19 22:30:42\'), (\'2026-09-23 22:30:42\',NULL,\'citoyen2@terranova.test\',\'Lala Ravelo\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-23 22:30:42\'), (\'2026-09-28 22:30:42\',NULL,\'citoyen3@terranova.test\',\'Tojo Randria\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-28 22:30:42\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`created_at`, `deleted_at`, `email`, `name`, `password_hash`, `role_id`, `updated_at`)
+VALUES (\'2026-09-03 22:30:42\',NULL,\'admin@terranova.test\',\'Admin Terra Nova\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'1\',\'2026-09-03 22:30:42\'), (\'2026-09-05 22:30:42\',NULL,\'agent1@terranova.test\',\'Hery Rakoto\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'2\',\'2026-09-05 22:30:42\'), (\'2026-09-05 22:30:42\',NULL,\'agent2@terranova.test\',\'Naina Rasoa\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'2\',\'2026-09-05 22:30:42\'), (\'2026-09-19 22:30:42\',NULL,\'citoyen1@terranova.test\',\'Rado Andria\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-19 22:30:42\'), (\'2026-09-23 22:30:42\',NULL,\'citoyen2@terranova.test\',\'Lala Ravelo\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-23 22:30:42\'), (\'2026-09-28 22:30:42\',NULL,\'citoyen3@terranova.test\',\'Tojo Randria\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-28 22:30:42\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`created_at`, `deleted_at`, `email`, `name`, `password_hash`, `role_id`, `updated_at`)
+VALUES (\'2026-09-03 22:30:42\',NULL,\'admin@terranova.test\',\'Admin Terra Nova\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'1\',\'2026-09-03 22:30:42\'), (\'2026-09-05 22:30:42\',NULL,\'agent1@terranova.test\',\'Hery Rakoto\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'2\',\'2026-09-05 22:30:42\'), (\'2026-09-05 22:30:42\',NULL,\'agent2@terranova.test\',\'Naina Rasoa\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'2\',\'2026-09-05 22:30:42\'), (\'2026-09-19 22:30:42\',NULL,\'citoyen1@terranova.test\',\'Rado Andria\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-19 22:30:42\'), (\'2026-09-23 22:30:42\',NULL,\'citoyen2@terranova.test\',\'Lala Ravelo\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-23 22:30:42\'), (\'2026-09-28 22:30:42\',NULL,\'citoyen3@terranova.test\',\'Tojo Randria\',\'$2y$12$n/LdTXy1vi.U6twnsnxgAezrtwL3TGebkGYtSN5.Dbl3LqTowN1EC\',\'3\',\'2026-09-28 22:30:42\')', null, false)
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH/Database/Seeds/UserSeeder.php(41): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\UserSeeder')
+ 9 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 22:30:42 --> Unknown column 'image' in 'INSERT INTO'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:30:42\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:30:42\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:30:42\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:30:42\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:30:42\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:30:42\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `services` (`created_at`, `icon`, `image`, `name`, `short_description`, `updated_at`)
+VALUES (\'2026-10-03 22:30:42\',\'orbit\',\'construction.jpg\',\'Construction\',\'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'blob\',\'sanitaire.jpg\',\'Sanitaire\',\'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'atom\',\'energie.jpg\',\'Énergétique\',\'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'waves\',\'security.jpg\',\'Sécuritaire\',\'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'flower\',\'agrnomie.jpg\',\'Agronomique\',\'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.\',\'2026-10-03 22:30:42\'), (\'2026-10-03 22:30:42\',\'gear\',\'technologie.jpg\',\'Maintenance technologique\',\'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.\',\'2026-10-03 22:30:42\')', null, false)
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH/Database/Seeds/ServiceSeeder.php(57): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\ServiceSeeder->run()
+ 8 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\ServiceSeeder')
+ 9 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 22:33:36 --> Can't DROP FOREIGN KEY `users_service_id_foreign`; check that it exists
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('ALTER TABLE `users` DROP FOREIGN KEY `users_service_id_foreign`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `users` DROP FOREIGN KEY `users_service_id_foreign`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `users` DROP FOREIGN KEY `users_service_id_foreign`')
+ 4 SYSTEMPATH/Database/Forge.php(539): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `users` DROP FOREIGN KEY `users_service_id_foreign`')
+ 5 APPPATH/Database/Migrations/2026-10-03-180248_AddServiceIdToUsers.php(33): CodeIgniter\Database\Forge->dropForeignKey('users', 'users_service_id_foreign')
+ 6 SYSTEMPATH/Database/MigrationRunner.php(1014): App\Database\Migrations\AddServiceIdToUsers->down()
+ 7 SYSTEMPATH/Database/MigrationRunner.php(323): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+ 8 SYSTEMPATH/Commands/Database/MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress(0)
+ 9 SYSTEMPATH/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRollback::{closure:CodeIgniter\Commands\Database\MigrateRollback::run():104}()
+10 SYSTEMPATH/Commands/Database/MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRollback->run([...])
+12 SYSTEMPATH/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate:rollback', [...])
+13 SYSTEMPATH/Commands/Database/MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call('migrate:rollback', [...])
+14 SYSTEMPATH/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+15 SYSTEMPATH/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked(Object(Closure))
+16 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run([...])
+17 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', [])
+18 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+20 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-10-03 22:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-03 22:44:26 --> Unknown column 'is_alert' in 'INSERT INTO'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `announcements` (`author_id`, `content`, `deleted_at`, `is_alert`, `published_at`, `title`, `updated_at`)
+VALUES (\'1\',\'Les habitants peuvent désormais créer leur compte, consulter les services municipaux et contacter l\\\'administration en ligne.\',NULL,0,\'2026-10-03 22:44:26\',\'Ouverture de la plateforme numérique de Terra Nova\',\'2026-10-03 22:44:26\'), (\'1\',\'Les navettes Centre-Dôme circulent désormais toutes les 10 minutes entre 6h et 22h.\',NULL,0,\'2026-10-02 22:44:26\',\'Nouveaux horaires des navettes\',\'2026-10-02 22:44:26\'), (\'1\',\'Une campagne de vaccination gratuite a lieu chaque mercredi au centre médical central. Aucun rendez-vous n\\\'est nécessaire.\',NULL,0,\'2026-10-01 22:44:26\',\'Campagne de vaccination au centre médical\',\'2026-10-01 22:44:26\'), (\'1\',\'Une courte maintenance du réseau est prévue dans le quartier des Serres. Les coupures éventuelles ne dépasseront pas 30 minutes.\',NULL,0,\'2026-09-30 22:44:26\',\'Maintenance du réseau d\\\'énergie\',\'2026-09-30 22:44:26\'), (\'1\',\'Les inscriptions pour la nouvelle année scolaire sont ouvertes au service Éducation et jeunesse, sur place ou en ligne.\',NULL,0,\'2026-09-28 22:44:26\',\'Inscriptions scolaires ouvertes\',\'2026-09-28 22:44:26\'), (\'1\',\'Une montée inhabituelle du niveau de l\\\'eau est observée dans le quartier sud. Les habitants sont invités à éviter la zone et à suivre les consignes des services municipaux.\',NULL,1,\'2026-10-03 22:44:26\',\'Alerte : montée inhabituelle du niveau de l\\\'eau — quartier Sud\',\'2026-10-03 22:44:26\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `announcements` (`author_id`, `content`, `deleted_at`, `is_alert`, `published_at`, `title`, `updated_at`)
+VALUES (\'1\',\'Les habitants peuvent désormais créer leur compte, consulter les services municipaux et contacter l\\\'administration en ligne.\',NULL,0,\'2026-10-03 22:44:26\',\'Ouverture de la plateforme numérique de Terra Nova\',\'2026-10-03 22:44:26\'), (\'1\',\'Les navettes Centre-Dôme circulent désormais toutes les 10 minutes entre 6h et 22h.\',NULL,0,\'2026-10-02 22:44:26\',\'Nouveaux horaires des navettes\',\'2026-10-02 22:44:26\'), (\'1\',\'Une campagne de vaccination gratuite a lieu chaque mercredi au centre médical central. Aucun rendez-vous n\\\'est nécessaire.\',NULL,0,\'2026-10-01 22:44:26\',\'Campagne de vaccination au centre médical\',\'2026-10-01 22:44:26\'), (\'1\',\'Une courte maintenance du réseau est prévue dans le quartier des Serres. Les coupures éventuelles ne dépasseront pas 30 minutes.\',NULL,0,\'2026-09-30 22:44:26\',\'Maintenance du réseau d\\\'énergie\',\'2026-09-30 22:44:26\'), (\'1\',\'Les inscriptions pour la nouvelle année scolaire sont ouvertes au service Éducation et jeunesse, sur place ou en ligne.\',NULL,0,\'2026-09-28 22:44:26\',\'Inscriptions scolaires ouvertes\',\'2026-09-28 22:44:26\'), (\'1\',\'Une montée inhabituelle du niveau de l\\\'eau est observée dans le quartier sud. Les habitants sont invités à éviter la zone et à suivre les consignes des services municipaux.\',NULL,1,\'2026-10-03 22:44:26\',\'Alerte : montée inhabituelle du niveau de l\\\'eau — quartier Sud\',\'2026-10-03 22:44:26\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `announcements` (`author_id`, `content`, `deleted_at`, `is_alert`, `published_at`, `title`, `updated_at`)
+VALUES (\'1\',\'Les habitants peuvent désormais créer leur compte, consulter les services municipaux et contacter l\\\'administration en ligne.\',NULL,0,\'2026-10-03 22:44:26\',\'Ouverture de la plateforme numérique de Terra Nova\',\'2026-10-03 22:44:26\'), (\'1\',\'Les navettes Centre-Dôme circulent désormais toutes les 10 minutes entre 6h et 22h.\',NULL,0,\'2026-10-02 22:44:26\',\'Nouveaux horaires des navettes\',\'2026-10-02 22:44:26\'), (\'1\',\'Une campagne de vaccination gratuite a lieu chaque mercredi au centre médical central. Aucun rendez-vous n\\\'est nécessaire.\',NULL,0,\'2026-10-01 22:44:26\',\'Campagne de vaccination au centre médical\',\'2026-10-01 22:44:26\'), (\'1\',\'Une courte maintenance du réseau est prévue dans le quartier des Serres. Les coupures éventuelles ne dépasseront pas 30 minutes.\',NULL,0,\'2026-09-30 22:44:26\',\'Maintenance du réseau d\\\'énergie\',\'2026-09-30 22:44:26\'), (\'1\',\'Les inscriptions pour la nouvelle année scolaire sont ouvertes au service Éducation et jeunesse, sur place ou en ligne.\',NULL,0,\'2026-09-28 22:44:26\',\'Inscriptions scolaires ouvertes\',\'2026-09-28 22:44:26\'), (\'1\',\'Une montée inhabituelle du niveau de l\\\'eau est observée dans le quartier sud. Les habitants sont invités à éviter la zone et à suivre les consignes des services municipaux.\',NULL,1,\'2026-10-03 22:44:26\',\'Alerte : montée inhabituelle du niveau de l\\\'eau — quartier Sud\',\'2026-10-03 22:44:26\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `announcements` (`author_id`, `content`, `deleted_at`, `is_alert`, `published_at`, `title`, `updated_at`)
+VALUES (\'1\',\'Les habitants peuvent désormais créer leur compte, consulter les services municipaux et contacter l\\\'administration en ligne.\',NULL,0,\'2026-10-03 22:44:26\',\'Ouverture de la plateforme numérique de Terra Nova\',\'2026-10-03 22:44:26\'), (\'1\',\'Les navettes Centre-Dôme circulent désormais toutes les 10 minutes entre 6h et 22h.\',NULL,0,\'2026-10-02 22:44:26\',\'Nouveaux horaires des navettes\',\'2026-10-02 22:44:26\'), (\'1\',\'Une campagne de vaccination gratuite a lieu chaque mercredi au centre médical central. Aucun rendez-vous n\\\'est nécessaire.\',NULL,0,\'2026-10-01 22:44:26\',\'Campagne de vaccination au centre médical\',\'2026-10-01 22:44:26\'), (\'1\',\'Une courte maintenance du réseau est prévue dans le quartier des Serres. Les coupures éventuelles ne dépasseront pas 30 minutes.\',NULL,0,\'2026-09-30 22:44:26\',\'Maintenance du réseau d\\\'énergie\',\'2026-09-30 22:44:26\'), (\'1\',\'Les inscriptions pour la nouvelle année scolaire sont ouvertes au service Éducation et jeunesse, sur place ou en ligne.\',NULL,0,\'2026-09-28 22:44:26\',\'Inscriptions scolaires ouvertes\',\'2026-09-28 22:44:26\'), (\'1\',\'Une montée inhabituelle du niveau de l\\\'eau est observée dans le quartier sud. Les habitants sont invités à éviter la zone et à suivre les consignes des services municipaux.\',NULL,1,\'2026-10-03 22:44:26\',\'Alerte : montée inhabituelle du niveau de l\\\'eau — quartier Sud\',\'2026-10-03 22:44:26\')', null, false)
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH/Database/Seeds/AnnouncementSeeder.php(67): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\AnnouncementSeeder->run()
+ 8 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\AnnouncementSeeder')
+ 9 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 22:44:39 --> Can't DROP FOREIGN KEY `users_service_id_foreign`; check that it exists
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('ALTER TABLE `users` DROP FOREIGN KEY `users_service_id_foreign`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `users` DROP FOREIGN KEY `users_service_id_foreign`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `users` DROP FOREIGN KEY `users_service_id_foreign`')
+ 4 SYSTEMPATH/Database/Forge.php(539): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `users` DROP FOREIGN KEY `users_service_id_foreign`')
+ 5 APPPATH/Database/Migrations/2026-10-03-180248_AddServiceIdToUsers.php(33): CodeIgniter\Database\Forge->dropForeignKey('users', 'users_service_id_foreign')
+ 6 SYSTEMPATH/Database/MigrationRunner.php(1014): App\Database\Migrations\AddServiceIdToUsers->down()
+ 7 SYSTEMPATH/Database/MigrationRunner.php(323): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+ 8 SYSTEMPATH/Commands/Database/MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress(0)
+ 9 SYSTEMPATH/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRollback::{closure:CodeIgniter\Commands\Database\MigrateRollback::run():104}()
+10 SYSTEMPATH/Commands/Database/MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRollback->run([...])
+12 SYSTEMPATH/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate:rollback', [...])
+13 SYSTEMPATH/Commands/Database/MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call('migrate:rollback', [...])
+14 SYSTEMPATH/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+15 SYSTEMPATH/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked(Object(Closure))
+16 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run([...])
+17 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', [])
+18 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+20 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-10-03 22:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-03 22:52:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "announcements/index.php"
+[Method: GET, Route: announcements]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('announcements/index.php')
+ 2 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('announcements/index', [], true)
+ 3 APPPATH/Controllers/Announcements.php(13): view('announcements/index', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Announcements->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcements))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+CRITICAL - 2026-10-03 22:52:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "announcements/index.php"
+[Method: GET, Route: announcements]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('announcements/index.php')
+ 2 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('announcements/index', [], true)
+ 3 APPPATH/Controllers/Announcements.php(13): view('announcements/index', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Announcements->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcements))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+DEBUG - 2026-10-03 22:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-03 23:06:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "partials/a11y_widget.php"
+[Method: GET, Route: menu]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/a11y_widget.php')
+ 2 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('partials/a11y_widget', [], true)
+ 3 APPPATH/Views/menu_page.php(79): view('partials/a11y_widget')
+ 4 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 6 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 7 APPPATH/Controllers/Menu.php(35): view('menu_page', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 9 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+10 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+DEBUG - 2026-10-03 23:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-03 23:31:55 --> Error: Call to undefined function App\Controllers\t_content()
+[Method: GET, Route: menu]
+in APPPATH/Controllers/Menu.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 2 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+DEBUG - 2026-10-03 23:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-03 23:31:59 --> Error: Call to undefined function App\Controllers\t_content()
+[Method: GET, Route: menu]
+in APPPATH/Controllers/Menu.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 2 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+DEBUG - 2026-10-03 23:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-10-03 23:33:35 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Construction', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Construction', 'en')
+ 3 APPPATH/Controllers/Menu.php(22): t_content('Construction')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:33:41 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.', 'en')
+ 3 APPPATH/Controllers/Menu.php(24): t_content('Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:33:46 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Sanitaire', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Sanitaire', 'en')
+ 3 APPPATH/Controllers/Menu.php(22): t_content('Sanitaire')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:33:49 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.', 'en')
+ 3 APPPATH/Controllers/Menu.php(24): t_content('Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:33:51 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Énergétique', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Énergétique', 'en')
+ 3 APPPATH/Controllers/Menu.php(22): t_content('Énergétique')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:33:53 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.', 'en')
+ 3 APPPATH/Controllers/Menu.php(24): t_content('Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:33:55 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Sécuritaire', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Sécuritaire', 'en')
+ 3 APPPATH/Controllers/Menu.php(22): t_content('Sécuritaire')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:33:57 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.', 'en')
+ 3 APPPATH/Controllers/Menu.php(24): t_content('Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:33:58 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Agronomique', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Agronomique', 'en')
+ 3 APPPATH/Controllers/Menu.php(22): t_content('Agronomique')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:34:00 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.', 'en')
+ 3 APPPATH/Controllers/Menu.php(24): t_content('Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:34:02 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Maintenance technologique', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Maintenance technologique', 'en')
+ 3 APPPATH/Controllers/Menu.php(22): t_content('Maintenance technologique')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+CRITICAL - 2026-10-03 23:34:04 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: GET, Route: menu]
+in APPPATH/Shared/Services/AiTranslator.php on line 51.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2026-10-03 23:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-10-03 23:34:15 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.', 'en')
+ 3 APPPATH/Controllers/Menu.php(24): t_content('Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.')
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:34:19 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Alerte : montée inhabituelle du niveau de l\'eau — quartier Sud', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Alerte : montée inhabituelle du niveau de l\'eau — quartier Sud', 'en')
+ 3 APPPATH/Views/menu_page.php(17): t_content('Alerte : montée inhabituelle du niveau de l\'eau — quartier Sud')
+ 4 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 6 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 7 APPPATH/Controllers/Menu.php(35): view('menu_page', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 9 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+10 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:34:24 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Une montée inhabituelle du niveau de l\'eau est observée dans le quartier sud. Les habitants sont invités à éviter la zon', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Une montée inhabituelle du niveau de l\'eau est observée dans le quartier sud. Les habitants sont invités à éviter la zon', 'en')
+ 3 APPPATH/Views/menu_page.php(18): t_content('Une montée inhabituelle du niveau de l\'eau est observée dans le quartier sud. Les habitants sont invités à éviter la zon')
+ 4 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 6 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 7 APPPATH/Controllers/Menu.php(35): view('menu_page', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 9 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+10 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:34:26 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Ouverture de la plateforme numérique de Terra Nova', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Ouverture de la plateforme numérique de Terra Nova', 'en')
+ 3 APPPATH/Views/menu_page.php(76): t_content('Ouverture de la plateforme numérique de Terra Nova')
+ 4 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 6 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 7 APPPATH/Controllers/Menu.php(35): view('menu_page', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 9 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+10 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:34:28 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Les habitants peuvent désormais créer leur compte, consulter les services municipaux et contacter l\'administration en ligne.', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Les habitants peuvent désormais créer leur compte, consulter les services municipaux et contacter l\'administration en ligne.', 'en')
+ 3 APPPATH/Views/menu_page.php(77): t_content('Les habitants peuvent désormais créer leur compte, consulter les services municipaux et contacter l\'administration en ligne.')
+ 4 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 6 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 7 APPPATH/Controllers/Menu.php(35): view('menu_page', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 9 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+10 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:34:29 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Nouveaux horaires des navettes', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Nouveaux horaires des navettes', 'en')
+ 3 APPPATH/Views/menu_page.php(76): t_content('Nouveaux horaires des navettes')
+ 4 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 6 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 7 APPPATH/Controllers/Menu.php(35): view('menu_page', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 9 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+10 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:34:31 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Les navettes Centre-Dôme circulent désormais toutes les 10 minutes entre 6h et 22h.', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Les navettes Centre-Dôme circulent désormais toutes les 10 minutes entre 6h et 22h.', 'en')
+ 3 APPPATH/Views/menu_page.php(77): t_content('Les navettes Centre-Dôme circulent désormais toutes les 10 minutes entre 6h et 22h.')
+ 4 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 6 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 7 APPPATH/Controllers/Menu.php(35): view('menu_page', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 9 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+10 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:34:37 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Campagne de vaccination au centre médical', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Campagne de vaccination au centre médical', 'en')
+ 3 APPPATH/Views/menu_page.php(76): t_content('Campagne de vaccination au centre médical')
+ 4 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 6 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 7 APPPATH/Controllers/Menu.php(35): view('menu_page', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 9 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+10 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:34:40 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 52.
+ 1 APPPATH/Shared/Services/AiTranslator.php(24): App\Shared\Services\AiTranslator::callApi('Une campagne de vaccination gratuite a lieu chaque mercredi au centre médical central. Aucun rendez-vous n\'est nécessaire.', 'en')
+ 2 APPPATH/Helpers/i18n_helper.php(13): App\Shared\Services\AiTranslator::translate('Une campagne de vaccination gratuite a lieu chaque mercredi au centre médical central. Aucun rendez-vous n\'est nécessaire.', 'en')
+ 3 APPPATH/Views/menu_page.php(77): t_content('Une campagne de vaccination gratuite a lieu chaque mercredi au centre médical central. Aucun rendez-vous n\'est nécessaire.')
+ 4 SYSTEMPATH/View/View.php(240): include('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/app/Views/menu_page.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 6 SYSTEMPATH/Common.php(1268): CodeIgniter\View\View->render('menu_page', [], true)
+ 7 APPPATH/Controllers/Menu.php(35): view('menu_page', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 9 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+10 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+DEBUG - 2026-10-03 23:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:40:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-10-03 23:45:05 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 83.
+ 1 APPPATH/Shared/Services/AiTranslator.php(44): App\Shared\Services\AiTranslator::callApi('Maintenance du réseau d\'énergie
+<<<|>>>
+Une courte maintenance du réseau est prévue dans le quartier des Serres. Les coupures éventuelles ne dépasseront pas 30 minutes.
+<<<|>>>
+Inscriptions scolaires ouvertes
+<<<|>>>
+Les inscriptions pour la nouvelle année scolaire sont ouvertes au service Éducation et jeunesse, sur place ou en ligne.', 'en')
+ 2 APPPATH/Controllers/Announcements.php(31): App\Shared\Services\AiTranslator::translateBatch([...], 'en')
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Announcements->index()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Announcements))
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+DEBUG - 2026-10-03 23:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-10-03 23:50:46 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 115.
+ 1 APPPATH/Shared/Services/AiTranslator.php(63): App\Shared\Services\AiTranslator::callApi('[[[0]]]
+Construction
+[[[1]]]
+Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.
+[[[2]]]
+Sanitaire
+[[[3]]]
+Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.
+[[[4]]]
+Énergétique', 'en')
+ 2 APPPATH/Controllers/Menu.php(38): App\Shared\Services\AiTranslator::translateBatch([...], 'en')
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:50:58 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 115.
+ 1 APPPATH/Shared/Services/AiTranslator.php(63): App\Shared\Services\AiTranslator::callApi('[[[0]]]
+Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.
+[[[1]]]
+Sécuritaire
+[[[2]]]
+Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.
+[[[3]]]
+Agronomique', 'en')
+ 2 APPPATH/Controllers/Menu.php(38): App\Shared\Services\AiTranslator::translateBatch([...], 'en')
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:51:00 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 115.
+ 1 APPPATH/Shared/Services/AiTranslator.php(63): App\Shared\Services\AiTranslator::callApi('[[[0]]]
+Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.
+[[[1]]]
+Maintenance technologique
+[[[2]]]
+Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.
+[[[3]]]
+Ouverture de la plateforme numérique de Terra Nova', 'en')
+ 2 APPPATH/Controllers/Menu.php(38): App\Shared\Services\AiTranslator::translateBatch([...], 'en')
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:51:02 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 115.
+ 1 APPPATH/Shared/Services/AiTranslator.php(63): App\Shared\Services\AiTranslator::callApi('[[[0]]]
+Les habitants peuvent désormais créer leur compte, consulter les services municipaux et contacter l\'administration en ligne.
+[[[1]]]
+Nouveaux horaires des navettes
+[[[2]]]
+Les navettes Centre-Dôme circulent désormais toutes les 10 minutes entre 6h et 22h.
+[[[3]]]
+Campagne de vaccination au centre médical', 'en')
+ 2 APPPATH/Controllers/Menu.php(38): App\Shared\Services\AiTranslator::translateBatch([...], 'en')
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+WARNING - 2026-10-03 23:51:05 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 115.
+ 1 APPPATH/Shared/Services/AiTranslator.php(63): App\Shared\Services\AiTranslator::callApi('[[[0]]]
+Une campagne de vaccination gratuite a lieu chaque mercredi au centre médical central. Aucun rendez-vous n\'est nécessaire.
+[[[1]]]
+Alerte : montée inhabituelle du niveau de l\'eau — quartier Sud
+[[[2]]]
+Une montée inhabituelle du niveau de l\'eau est observée dans le quartier sud. Les habitants sont invités à éviter la zon', 'en')
+ 2 APPPATH/Controllers/Menu.php(38): App\Shared\Services\AiTranslator::translateBatch([...], 'en')
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')
+DEBUG - 2026-10-03 23:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 23:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-10-03 23:51:40 --> [DEPRECATED] Function curl_close() is deprecated since 8.5, as it has no effect since PHP 8.0 in APPPATH/Shared/Services/AiTranslator.php on line 115.
+ 1 APPPATH/Shared/Services/AiTranslator.php(63): App\Shared\Services\AiTranslator::callApi('[[[0]]]
+Construction', 'en')
+ 2 APPPATH/Controllers/Menu.php(38): App\Shared\Services\AiTranslator::translateBatch([...], 'en')
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Menu->index()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/Users/rabarijohnsandroandrianina/Documents/GitHub/24h-by-webcup-vain-afo/public/index.php')

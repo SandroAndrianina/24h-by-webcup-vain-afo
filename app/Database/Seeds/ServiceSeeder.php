@@ -8,53 +8,52 @@ class ServiceSeeder extends Seeder
 {
     public function run()
     {
-        $rows = [
+        $services = [
             [
-                'name'              => 'État civil',
-                'short_description' => 'Naissances, mariages, décès et documents officiels',
-                'details'           => "Horaires : lundi au vendredi, 8h-16h.\nDémarches : déclaration de naissance, acte de mariage, certificat de résidence.\nPièces à fournir : pièce d'identité et justificatif de domicile.\nContact : etatcivil@terranova.test",
-                'icon'              => 'file-text',
+                'name'              => 'Construction',
+                'short_description' => 'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.',
+                'icon'              => 'orbit',
+                'image'             => 'construction.jpg',
             ],
             [
-                'name'              => 'Santé',
-                'short_description' => 'Centres de soins, urgences et prévention',
-                'details'           => "Centre médical central ouvert 24h/24.\nVaccinations gratuites chaque mercredi, sans rendez-vous.\nUrgences : ligne 112.\nContact : sante@terranova.test",
-                'icon'              => 'heart-pulse',
+                'name'              => 'Sanitaire',
+                'short_description' => 'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.',
+                'icon'              => 'blob',
+                'image'             => 'sanitaire.jpg',
             ],
             [
-                'name'              => 'Urbanisme et logement',
-                'short_description' => 'Permis de construire et attribution de logements',
-                'details'           => "Dépôt des demandes de permis au guichet ou en ligne.\nDélai moyen d'instruction : 15 jours.\nAttribution de logements : dossier à déposer auprès du service.\nContact : urbanisme@terranova.test",
-                'icon'              => 'building-2',
+                'name'              => 'Énergétique',
+                'short_description' => 'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.',
+                'icon'              => 'atom',
+                'image'             => 'energie.jpg',
             ],
             [
-                'name'              => 'Transports',
-                'short_description' => 'Navettes, horaires et lignes de la ville',
-                'details'           => "Navettes toutes les 10 minutes en journée (6h-22h).\nLignes : Centre-Dôme, Dôme-Spatioport, Dôme-Serres.\nAbonnement mensuel disponible au guichet.\nContact : transports@terranova.test",
-                'icon'              => 'bus',
+                'name'              => 'Sécuritaire',
+                'short_description' => 'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.',
+                'icon'              => 'waves',
+                'image'             => 'security.jpg',
             ],
             [
-                'name'              => 'Environnement et énergie',
-                'short_description' => "Eau, énergie, recyclage et qualité de l'air",
-                'details'           => "Collecte du recyclage deux fois par semaine.\nSuivi en continu de la qualité de l'air dans les dômes.\nSignalement de fuite ou de panne : environnement@terranova.test",
-                'icon'              => 'leaf',
+                'name'              => 'Agronomique',
+                'short_description' => 'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.',
+                'icon'              => 'flower',
+                'image'             => 'agrnomie.jpg',
             ],
             [
-                'name'              => 'Éducation et jeunesse',
-                'short_description' => 'Écoles, activités et soutien aux familles',
-                'details'           => "Inscriptions scolaires ouvertes toute l'année.\nActivités jeunesse après l'école.\nAides aux familles : dossier à retirer au service.\nContact : education@terranova.test",
-                'icon'              => 'graduation-cap',
+                'name'              => 'Maintenance technologique',
+                'short_description' => 'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.',
+                'icon'              => 'gear',
+                'image'             => 'technologie.jpg',
             ],
         ];
 
         $now = date('Y-m-d H:i:s');
-        foreach ($rows as &$row) {
-            $row['created_at'] = $now;
-            $row['updated_at'] = $now;
-            $row['deleted_at'] = null;
-        }
-        unset($row);
 
-        $this->db->table('services')->insertBatch($rows);
+        foreach ($services as &$s) {
+            $s['created_at'] = $now;
+            $s['updated_at'] = $now;
+        }
+
+        $this->db->table('services')->insertBatch($services);
     }
 }

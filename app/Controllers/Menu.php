@@ -2,24 +2,88 @@
 
 namespace App\Controllers;
 
+use App\Models\AnnouncementModel;
+use App\Models\ServiceModel;
+use App\Shared\Services\AiTranslator;
+
 class Menu extends BaseController
 {
+    protected $helpers = ['url', 'i18n'];
+
     public function index(): string
     {
-        helper('url');
+        $services = (new ServiceModel())->orderBy('id', 'ASC')->findAll();
+        $announcementModel = new AnnouncementModel();
+        $announcements = $announcementModel->getLatest(3);
+        $activeAlert   = $announcementModel->getActiveAlert();
+
+        $lang = session()->get('lang') ?? 'fr';
+
+        // Si FR → on ne traduit rien
+        if ($lang !== 'fr') {
+            $toTranslate = [];
+            foreach ($services as $i => $s) {
+                $toTranslate["s{$i}_name"] = $s['name'];
+                $toTranslate["s{$i}_desc"] = $s['short_description'];
+            }
+            foreach ($announcements as $i => $a) {
+                $toTranslate["a{$i}_title"] = $a['title'];
+                $toTranslate["a{$i}_desc"]  = mb_substr(strip_tags($a['content']), 0, 140);
+            }
+            if ($activeAlert) {
+                $toTranslate["alert_title"] = $activeAlert['title'];
+                $toTranslate["alert_desc"]  = mb_substr(strip_tags($activeAlert['content']), 0, 120);
+            }
+
+            $translations = AiTranslator::translateBatch($toTranslate, $lang);
+
+            foreach ($services as $i => &$s) {
+                $s['name']              = $translations["s{$i}_name"] ?? $s['name'];
+                $s['short_description'] = $translations["s{$i}_desc"] ?? $s['short_description'];
+            }
+            unset($s);
+
+            foreach ($announcements as $i => &$a) {
+                $a['title']        = $translations["a{$i}_title"] ?? $a['title'];
+                $a['content_trim'] = $translations["a{$i}_desc"]  ?? mb_substr(strip_tags($a['content']), 0, 140);
+            }
+            unset($a);
+
+            if ($activeAlert) {
+                $activeAlert['title']        = $translations['alert_title'] ?? $activeAlert['title'];
+                $activeAlert['content_trim'] = $translations['alert_desc']  ?? mb_substr(strip_tags($activeAlert['content']), 0, 120);
+            }
+        } else {
+            foreach ($announcements as &$a) {
+                $a['content_trim'] = mb_substr(strip_tags($a['content']), 0, 140);
+            }
+            unset($a);
+            if ($activeAlert) {
+                $activeAlert['content_trim'] = mb_substr(strip_tags($activeAlert['content']), 0, 120);
+            }
+        }
+
+        $items = [];
+        foreach ($services as $i => $s) {
+            $items[] = [
+                'id'    => $s['id'],
+                'num'   => str_pad($i + 1, 2, '0', STR_PAD_LEFT),
+                'icon'  => $s['icon'] ?? 'orbit',
+                'title' => $s['name'],
+                'image' => base_url('assets/images/' . $s['image']),
+                'text'  => $s['short_description'],
+            ];
+        }
 
         $menu = [
-            'name'  => 'LISTE DES SERVICES DISPONIBLES',
-            'items' => [
-                ['num' => '01', 'icon' => 'orbit',  'title' => 'Construction', 'image' => base_url('assets/images/construction.jpg'), 'text' => 'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.'],
-                ['num' => '02', 'icon' => 'blob',   'title' => 'Sanitaire', 'image' => base_url('assets/images/sanitaire.jpg'), 'text' => 'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.'],
-                ['num' => '03', 'icon' => 'atom',   'title' => 'Énergétique', 'image' => base_url('assets/images/energie.jpg'), 'text' => 'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.'],
-                ['num' => '04', 'icon' => 'waves',  'title' => 'Sécuritaire', 'image' => base_url('assets/images/security.jpg'), 'text' => 'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.'],
-                ['num' => '05', 'icon' => 'flower', 'title' => 'Agronomique', 'image' => base_url('assets/images/agrnomie.jpg'), 'text' => 'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.'],
-                ['num' => '06', 'icon' => 'gear',   'title' => 'Maintenance technologique', 'image' => base_url('assets/images/technologie.jpg'), 'text' => 'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.'],
-            ],
+            'name'  => lang('App.home.title'),
+            'items' => $items,
         ];
 
-        return view('menu_page', ['menu' => $menu]);
+        return view('menu_page', [
+            'menu'          => $menu,
+            'announcements' => $announcements,
+            'activeAlert'   => $activeAlert,
+        ]);
     }
 }
