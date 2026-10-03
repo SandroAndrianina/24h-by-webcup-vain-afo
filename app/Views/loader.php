@@ -10,11 +10,11 @@
 <body>
 <main class="launch">
     <img class="launch__image" src="<?= base_url('assets/images/background.jpg') ?>" alt="" fetchpriority="high">
-  <video class="launch__video" poster="<?= base_url('assets/images/background.jpg') ?>" playsinline preload="auto" aria-label="Vidéo de présentation TERRA NOVA">
-    <source src="<?= base_url('assets/images/terra-nova-start.mp4') ?>" type="video/mp4">
-  </video>
+    <video class="launch__video" poster="<?= base_url('assets/images/background.jpg') ?>" playsinline preload="auto" aria-label="Vidéo de présentation TERRA NOVA">
+        <source src="<?= base_url('assets/images/terra-nova-start.mp4') ?>" type="video/mp4">
+    </video>
     <section class="launch__content" aria-label="TERRA NOVA">
-        <a class="launch__start" href="<?= site_url('login') ?>">START</a>
+        <a class="launch__start" href="<?= site_url('menu') ?>">START</a>
     </section>
 </main>
 <script>
@@ -24,7 +24,7 @@
   let transitionTimer
   let introTimer
 
-  function openLogin() {
+  function openMenu() {
     if (launch.classList.contains('is-transitioning')) return
     introVideo.pause()
     window.clearTimeout(introTimer)
@@ -33,21 +33,21 @@
     transitionTimer = window.setTimeout(() => window.location.assign(startLink.href), delay)
   }
 
-  introVideo.addEventListener('ended', openLogin)
-  introVideo.addEventListener('error', openLogin)
+  introVideo.addEventListener('ended', openMenu)
+  introVideo.addEventListener('error', openMenu)
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden && launch.classList.contains('is-playing') && introVideo.paused) {
-      introVideo.play().catch(openLogin)
+      introVideo.play().catch(openMenu)
     }
   })
   startLink.addEventListener('click', event => {
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
     event.preventDefault()
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return openLogin()
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return openMenu()
     launch.classList.add('is-playing')
     introVideo.play().then(() => {
-      introTimer = window.setTimeout(openLogin, Math.min(introVideo.duration * 1000, 4800))
-    }).catch(openLogin)
+      introTimer = window.setTimeout(openMenu, Math.min(introVideo.duration * 1000, 4800))
+    }).catch(openMenu)
   })
 </script>
 </body>
