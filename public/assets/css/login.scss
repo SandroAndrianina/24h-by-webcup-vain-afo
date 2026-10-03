@@ -4,8 +4,7 @@ $paper: #cbcbcb;
 $accent: #df9830;
 $muted: #5c5756;
 $accent-ink: #684111;
-$sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-$serif: 'Playfair Display', Georgia, serif;
+$sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
 // Toute la page est dessinée à l'échelle de --u (voir :root)
 @function u($n) { @return calc(var(--u) * #{$n}); }
 /* ==END== */
