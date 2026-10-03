@@ -8,22 +8,15 @@ class Menu extends BaseController
     {
         helper('url');
 
-        // Remplace les url par tes vraies routes
         $menu = [
-            'name'  => 'Dashboard Admin',
+            'name'  => 'LISTE DES SERVICES DISPONIBLES',
             'items' => [
-                ['num' => '01', 'icon' => 'orbit',   'title' => 'Tableau de bord', 'url' => site_url('dashboard'),
-                 'text' => "Une vue d'ensemble de votre activité : revenus, commandes et indicateurs clés, mis à jour en temps réel pour décider plus vite."],
-                ['num' => '02', 'icon' => 'blob',    'title' => 'Utilisateurs',    'url' => site_url('users'),
-                 'text' => "Gérez les comptes, les rôles et les permissions de votre équipe et de vos clients depuis un seul écran."],
-                ['num' => '03', 'icon' => 'atom',    'title' => 'Commandes',       'url' => site_url('orders'),
-                 'text' => "Suivez chaque commande, de la validation à la livraison, et traitez les retours sans quitter la page."],
-                ['num' => '04', 'icon' => 'waves',   'title' => 'Produits',        'url' => site_url('products'),
-                 'text' => "Ajoutez, modifiez et organisez votre catalogue : stocks, prix, catégories et visuels au même endroit."],
-                ['num' => '05', 'icon' => 'flower',  'title' => 'Rapports',        'url' => site_url('reports'),
-                 'text' => "Exportez des rapports clairs sur les ventes, les visites et les performances de chaque période."],
-                ['num' => '06', 'icon' => 'gear',    'title' => 'Paramètres',      'url' => site_url('settings'),
-                 'text' => "Configurez la plateforme, les notifications et la sécurité selon les besoins de votre organisation."],
+                ['num' => '01', 'icon' => 'orbit',  'title' => 'Construction', 'image' => base_url('assets/images/construction.jpg'), 'text' => 'Conception, rénovation et suivi de vos chantiers, des plans initiaux à la livraison, avec coordination des équipes et contrôle des coûts.'],
+                ['num' => '02', 'icon' => 'blob',   'title' => 'Sanitaire', 'image' => base_url('assets/images/sanitaire.jpg'), 'text' => 'Installation et entretien des réseaux sanitaires, équipements de plomberie et systèmes d’évacuation, dans le respect des normes.'],
+                ['num' => '03', 'icon' => 'atom',   'title' => 'Énergétique', 'image' => base_url('assets/images/energie.jpg'), 'text' => 'Audit, installation et optimisation des systèmes énergétiques pour réduire la consommation et améliorer l’efficacité des bâtiments.'],
+                ['num' => '04', 'icon' => 'waves',  'title' => 'Sécuritaire', 'image' => base_url('assets/images/security.jpg'), 'text' => 'Étude et installation de solutions de sécurité, contrôle d’accès, surveillance et prévention des risques sur vos sites.'],
+                ['num' => '05', 'icon' => 'flower', 'title' => 'Agronomique', 'image' => base_url('assets/images/agrnomie.jpg'), 'text' => 'Accompagnement agricole : étude des sols, choix des cultures, gestion des ressources et suivi technique des exploitations.'],
+                ['num' => '06', 'icon' => 'gear',   'title' => 'Maintenance technologique', 'image' => base_url('assets/images/technologie.jpg'), 'text' => 'Maintenance préventive et corrective de vos équipements et infrastructures technologiques pour garantir leur disponibilité.'],
             ],
         ];
 
