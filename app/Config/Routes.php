@@ -22,3 +22,8 @@ $routes->get('/logout', 'AuthController::logout');
 $routes->get('/admin', 'AdminController::index', ['filter' => 'admin']);
 $routes->get('/agent', 'AgentController::index', ['filter' => 'agent']);
 $routes->get('/citoyen', 'CitoyenController::index', ['filter' => 'auth']);
+$routes->get('login', 'Auth::index');
+$routes->post('login', 'Auth::attempt');
+$routes->get('dashboard', 'DashboardAdmin::index');
+$routes->get('admin/dashboard', 'DashboardAdmin::index');
+$routes->get('menu', 'Menu::index');
