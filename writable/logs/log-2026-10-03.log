@@ -1,0 +1,896 @@
+ERROR - 2026-10-03 12:45:16 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(256): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRollback::{closure:CodeIgniter\Commands\Database\MigrateRollback::run():104}()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked()
+#10 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRollback->run()
+#11 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#12 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call()
+#13 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+#14 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+#15 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#16 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#17 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#18 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#19 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#20 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(256): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRollback::{closure:CodeIgniter\Commands\Database\MigrateRollback::run():104}()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRollback->run()
+#10 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#11 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call()
+#12 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+#13 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+#14 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#15 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#16 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#17 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#18 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#19 {main}
+ERROR - 2026-10-03 12:45:16 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#10 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+#11 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#12 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(91): CodeIgniter\CLI\BaseCommand->call()
+#13 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+#14 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+#15 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#16 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#17 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#18 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#19 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#20 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+#10 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#11 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(91): CodeIgniter\CLI\BaseCommand->call()
+#12 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+#13 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+#14 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#15 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#16 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#17 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#18 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#19 {main}
+ERROR - 2026-10-03 12:45:16 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Database.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Seeder.php(103): CodeIgniter\Database\Config::forge()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#10 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Database.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Seeder.php(103): CodeIgniter\Database\Config::forge()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#10 {main}
+CRITICAL - 2026-10-03 12:45:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: CLI, Route: db:seed/DatabaseSeeder]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/Database.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+ 3 SYSTEMPATH/Database/Seeder.php(103): CodeIgniter\Database\Config::forge()
+ 4 SYSTEMPATH/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+ 5 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run()
+ 6 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 7 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+ 8 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+ 9 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-10-03 12:51:18 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'41.74.211.114' (using password: NO) in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(256): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRollback::{closure:CodeIgniter\Commands\Database\MigrateRollback::run():104}()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked()
+#10 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRollback->run()
+#11 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#12 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call()
+#13 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+#14 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+#15 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#16 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#17 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#18 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#19 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#20 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'41.74.211.114' (using password: NO) in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(256): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRollback::{closure:CodeIgniter\Commands\Database\MigrateRollback::run():104}()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRollback->run()
+#10 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#11 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call()
+#12 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+#13 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+#14 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#15 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#16 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#17 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#18 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#19 {main}
+ERROR - 2026-10-03 12:51:18 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'41.74.211.114' (using password: NO) in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#10 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+#11 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#12 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(91): CodeIgniter\CLI\BaseCommand->call()
+#13 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+#14 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+#15 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#16 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#17 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#18 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#19 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#20 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'41.74.211.114' (using password: NO) in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+#10 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#11 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(91): CodeIgniter\CLI\BaseCommand->call()
+#12 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+#13 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+#14 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#15 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#16 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#17 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#18 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#19 {main}
+ERROR - 2026-10-03 12:51:19 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'41.74.211.114' (using password: NO) in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Database.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Seeder.php(103): CodeIgniter\Database\Config::forge()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#10 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'41.74.211.114' (using password: NO) in /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Database.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#3 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Database/Seeder.php(103): CodeIgniter\Database\Config::forge()
+#4 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#5 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run()
+#6 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#7 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(444): CodeIgniter\CLI\Console->run()
+#8 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#9 /home/mihaja/Documents/GitHub/24h-by-webcup-vain-afo/spark(87): CodeIgniter\Boot::bootSpark()
+#10 {main}
+CRITICAL - 2026-10-03 12:51:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'41.74.211.114' (using password: NO)
+[Method: CLI, Route: db:seed/DatabaseSeeder]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/Database.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+ 3 SYSTEMPATH/Database/Seeder.php(103): CodeIgniter\Database\Config::forge()
+ 4 SYSTEMPATH/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+ 5 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run()
+ 6 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 7 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+ 8 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+ 9 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-10-03 12:52:41 --> Unknown column 'is_active' in 'INSERT INTO'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute()
+ 6 APPPATH/Database/Seeds/UserSeeder.php(40): CodeIgniter\Database\BaseBuilder->insertBatch()
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 APPPATH/Database/Seeds/DatabaseSeeder.php(12): CodeIgniter\Database\Seeder->call()
+ 9 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+10 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+11 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run()
+12 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-10-03 12:54:25 --> Unknown column 'created_at' in 'INSERT INTO'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute()
+ 6 APPPATH/Database/Seeds/AnnouncementSeeder.php(47): CodeIgniter\Database\BaseBuilder->insertBatch()
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\AnnouncementSeeder->run()
+ 8 APPPATH/Database/Seeds/DatabaseSeeder.php(14): CodeIgniter\Database\Seeder->call()
+ 9 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+10 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+11 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run()
+12 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+CRITICAL - 2026-10-03 13:40:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(11): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+CRITICAL - 2026-10-03 13:40:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(11): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+CRITICAL - 2026-10-03 13:40:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(11): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+CRITICAL - 2026-10-03 13:41:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(11): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+CRITICAL - 2026-10-03 13:41:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(11): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+CRITICAL - 2026-10-03 13:43:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "register.php"
+[Method: GET, Route: register]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('register', [], true)
+ 3 APPPATH\Controllers\AuthController.php(55): view('register')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->register()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+DEBUG - 2026-10-03 13:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 13:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 13:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 13:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 13:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 13:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 13:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 13:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 13:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 13:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 14:29:26 --> CSRF token verified.
+INFO - 2026-10-03 14:29:41 --> CSRF token verified.
+INFO - 2026-10-03 14:29:43 --> CSRF token verified.
+DEBUG - 2026-10-03 14:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 14:30:00 --> CSRF token verified.
+DEBUG - 2026-10-03 14:30:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:30:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 14:31:55 --> CSRF token verified.
+DEBUG - 2026-10-03 14:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 14:32:08 --> CSRF token verified.
+DEBUG - 2026-10-03 14:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 14:33:03 --> CSRF token verified.
+DEBUG - 2026-10-03 14:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 14:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 15:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-03 16:38:12 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: login]
+in SYSTEMPATH\Security\Security.php on line 258.
+ 1 SYSTEMPATH\Security\Security.php(258): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('login', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+INFO - 2026-10-03 16:45:34 --> CSRF token verified.
+ERROR - 2026-10-03 16:45:44 --> Error connecting to the database: mysqli_sql_exception: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu in C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('tnr1.hodi.host', 'vahinrsquoafo_t...', Object(SensitiveParameterValue), 'vahinrsquoafo_t...', 3306, '', 0)
+#1 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\app\Controllers\AuthController.php(36): CodeIgniter\BaseModel->first()
+#7 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(974): App\Controllers\AuthController->login()
+#8 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\rewrite.php(44): require_once('C:\\Users\\Iraka\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu in C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\app\Controllers\AuthController.php(36): CodeIgniter\BaseModel->first()
+#6 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(974): App\Controllers\AuthController->login()
+#7 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\rewrite.php(44): require_once('C:\\Users\\Iraka\\...')
+#13 {main}
+CRITICAL - 2026-10-03 16:45:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(36): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+INFO - 2026-10-03 16:47:25 --> CSRF token verified.
+DEBUG - 2026-10-03 16:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 16:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 16:47:54 --> CSRF token verified.
+DEBUG - 2026-10-03 16:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 16:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 16:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 16:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 17:00:35 --> CSRF token verified.
+INFO - 2026-10-03 17:00:44 --> CSRF token verified.
+DEBUG - 2026-10-03 17:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 17:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-03 17:15:09 --> Table 'services' already exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-10-03-100002_CreateServicesTable.php(22): CodeIgniter\Database\Forge->createTable('services')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateServicesTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([...])
+12 SYSTEMPATH\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', [...])
+13 SYSTEMPATH\Commands\Database\MigrateRefresh.php(91): CodeIgniter\CLI\BaseCommand->call('migrate', [...])
+14 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->CodeIgniter\Commands\Database\{closure}()
+15 SYSTEMPATH\Commands\Database\MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked(Object(Closure))
+16 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run([...])
+17 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', [])
+18 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+20 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 17:21:21 --> Table 'services' already exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-10-03-100002_CreateServicesTable.php(22): CodeIgniter\Database\Forge->createTable('services')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateServicesTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([...])
+12 SYSTEMPATH\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', [...])
+13 SYSTEMPATH\Commands\Database\MigrateRefresh.php(91): CodeIgniter\CLI\BaseCommand->call('migrate', [...])
+14 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->CodeIgniter\Commands\Database\{closure}()
+15 SYSTEMPATH\Commands\Database\MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked(Object(Closure))
+16 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run([...])
+17 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', [])
+18 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+20 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 17:24:12 --> Table 'services' already exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-10-03-100002_CreateServicesTable.php(22): CodeIgniter\Database\Forge->createTable('services')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateServicesTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([...])
+12 SYSTEMPATH\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', [...])
+13 SYSTEMPATH\Commands\Database\MigrateRefresh.php(91): CodeIgniter\CLI\BaseCommand->call('migrate', [...])
+14 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->CodeIgniter\Commands\Database\{closure}()
+15 SYSTEMPATH\Commands\Database\MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked(Object(Closure))
+16 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run([...])
+17 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', [])
+18 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+20 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 17:25:48 --> Table 'users' already exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `users` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`role_id` INT(11) UNSIGNED NOT NULL,
+	`service_id` INT(11) UNSIGNED NULL,
+	`name` VARCHAR(150) NOT NULL,
+	`email` VARCHAR(190) NOT NULL,
+	`password_hash` VARCHAR(255) NOT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`),
+	CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+	CONSTRAINT `users_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	UNIQUE KEY `email` (`email`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `users` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`role_id` INT(11) UNSIGNED NOT NULL,
+	`service_id` INT(11) UNSIGNED NULL,
+	`name` VARCHAR(150) NOT NULL,
+	`email` VARCHAR(190) NOT NULL,
+	`password_hash` VARCHAR(255) NOT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`),
+	CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+	CONSTRAINT `users_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	UNIQUE KEY `email` (`email`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `users` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`role_id` INT(11) UNSIGNED NOT NULL,
+	`service_id` INT(11) UNSIGNED NULL,
+	`name` VARCHAR(150) NOT NULL,
+	`email` VARCHAR(190) NOT NULL,
+	`password_hash` VARCHAR(255) NOT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`),
+	CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+	CONSTRAINT `users_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	UNIQUE KEY `email` (`email`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `users` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`role_id` INT(11) UNSIGNED NOT NULL,
+	`service_id` INT(11) UNSIGNED NULL,
+	`name` VARCHAR(150) NOT NULL,
+	`email` VARCHAR(190) NOT NULL,
+	`password_hash` VARCHAR(255) NOT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`),
+	CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+	CONSTRAINT `users_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	UNIQUE KEY `email` (`email`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-10-03-100003_CreateUsersTable.php(29): CodeIgniter\Database\Forge->createTable('users')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateUsersTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([...])
+12 SYSTEMPATH\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', [...])
+13 SYSTEMPATH\Commands\Database\MigrateRefresh.php(91): CodeIgniter\CLI\BaseCommand->call('migrate', [...])
+14 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->CodeIgniter\Commands\Database\{closure}()
+15 SYSTEMPATH\Commands\Database\MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked(Object(Closure))
+16 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run([...])
+17 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', [])
+18 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+20 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-10-03 18:09:57 --> Table 'services' already exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `services` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`short_description` VARCHAR(255) NOT NULL,
+	`details` TEXT NULL,
+	`icon` VARCHAR(50) NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	`deleted_at` DATETIME NULL,
+	CONSTRAINT `pk_services` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-10-03-100002_CreateServicesTable.php(22): CodeIgniter\Database\Forge->createTable('services')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateServicesTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-10-03 18:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 18:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 18:58:51 --> CSRF token verified.
+ERROR - 2026-10-03 18:58:52 --> Cannot add or update a child row: a foreign key constraint fails (`vahinrsquoafo_terranova`.`users`, CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (2, \'5\', \'iraka\', \'irakanomena@gmail.com\', \'$2y$10$hyRTP/pi.lDZ4prYTSl9nexqrl/WO57aa2qbY4dtrMFRwC8BQDTwq\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (2, \'5\', \'iraka\', \'irakanomena@gmail.com\', \'$2y$10$hyRTP/pi.lDZ4prYTSl9nexqrl/WO57aa2qbY4dtrMFRwC8BQDTwq\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (2, \'5\', \'iraka\', \'irakanomena@gmail.com\', \'$2y$10$hyRTP/pi.lDZ4prYTSl9nexqrl/WO57aa2qbY4dtrMFRwC8BQDTwq\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (:role_id:, :service_id:, :name:, :email:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AuthController.php(149): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->registerAgent()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+CRITICAL - 2026-10-03 18:58:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`vahinrsquoafo_terranova`.`users`, CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON UPDATE CASCADE)
+[Method: POST, Route: register-agent]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (:role_id:, :service_id:, :name:, :email:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AuthController.php(149): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->registerAgent()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+CRITICAL - 2026-10-03 18:58:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`vahinrsquoafo_terranova`.`users`, CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (2, \'5\', \'iraka\', \'irakanomena@gmail.com\', \'$2y$10$hyRTP/pi.lDZ4prYTSl9nexqrl/WO57aa2qbY4dtrMFRwC8BQDTwq\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (2, \'5\', \'iraka\', \'irakanomena@gmail.com\', \'$2y$10$hyRTP/pi.lDZ4prYTSl9nexqrl/WO57aa2qbY4dtrMFRwC8BQDTwq\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (:role_id:, :service_id:, :name:, :email:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\AuthController.php(149): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->registerAgent()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+CRITICAL - 2026-10-03 18:58:52 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`vahinrsquoafo_terranova`.`users`, CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (2, \'5\', \'iraka\', \'irakanomena@gmail.com\', \'$2y$10$hyRTP/pi.lDZ4prYTSl9nexqrl/WO57aa2qbY4dtrMFRwC8BQDTwq\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (2, \'5\', \'iraka\', \'irakanomena@gmail.com\', \'$2y$10$hyRTP/pi.lDZ4prYTSl9nexqrl/WO57aa2qbY4dtrMFRwC8BQDTwq\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (2, \'5\', \'iraka\', \'irakanomena@gmail.com\', \'$2y$10$hyRTP/pi.lDZ4prYTSl9nexqrl/WO57aa2qbY4dtrMFRwC8BQDTwq\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`role_id`, `service_id`, `name`, `email`, `password_hash`) VALUES (:role_id:, :service_id:, :name:, :email:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AuthController.php(149): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->registerAgent()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+INFO - 2026-10-03 19:06:38 --> CSRF token verified.
+INFO - 2026-10-03 19:07:16 --> CSRF token verified.
+INFO - 2026-10-03 19:07:23 --> CSRF token verified.
+DEBUG - 2026-10-03 19:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 19:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
