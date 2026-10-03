@@ -8,6 +8,7 @@
 <body>
     <h1>Connexion</h1>
     <form action="/login" method="post">
+        <?= csrf_field() ?>
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Mot de passe">
         <button type="submit">Se connecter</button>
