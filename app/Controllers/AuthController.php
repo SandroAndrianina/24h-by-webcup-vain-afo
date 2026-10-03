@@ -2,8 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\UserModel;
 
 class AuthController extends BaseController
 {
@@ -17,11 +16,121 @@ class AuthController extends BaseController
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
-        return "Login reçu : " . $email;
+        $userModel = new UserModel();
+
+        $user = $userModel->where('email', $email)->first();
+
+        if (!$user || !password_verify($password, $user['password_hash'])) {
+            return redirect()->to('/login');
+        }
+
+        $db = \Config\Database::connect();
+
+        $role = $db->table('roles')
+            ->where('id', $user['role_id'])
+            ->get()
+            ->getRowArray();
+
+        session()->regenerate();
+        
+        session()->set([
+            'user_id'   => $user['id'],
+            'name'      => $user['name'],
+            'role'      => $role['code'],
+            'logged_in' => true
+        ]);
+
+        if ($role['code'] === 'admin') {
+            return redirect()->to('/admin');
+        }
+
+        if ($role['code'] === 'agent') {
+            return redirect()->to('/agent');
+        }
+
+        return redirect()->to('/citoyen');
+    }
+
+    public function register()
+    {
+        if ($this->request->getMethod() === 'GET') {
+            return view('auth/register');
+        }
+
+        $validation = [
+            'name'     => 'required|min_length[2]',
+            'email'    => 'required|valid_email',
+            'password' => 'required|min_length[8]'
+        ];
+
+        if (!$this->validate($validation)) {
+            return redirect()->to('/register');
+        }
+
+        $name = $this->request->getPost('name');
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+
+        $userModel = new UserModel();
+
+        $existingUser = $userModel->where('email', $email)->first();
+
+        if ($existingUser) {
+            return redirect()->to('/register');
+        }
+
+        $userModel->insert([
+            'role_id'       => 3,
+            'name'          => $name,
+            'email'         => $email,
+            'password_hash' => password_hash($password, PASSWORD_DEFAULT)
+        ]);
+
+        return redirect()->to('/login');
+    }
+
+    public function registerAgent()
+    {
+        if ($this->request->getMethod() === 'GET') {
+            return view('auth/register-agent');
+        }
+
+        $validation = [
+            'name'     => 'required|min_length[2]',
+            'email'    => 'required|valid_email',
+            'password' => 'required|min_length[8]'
+        ];
+
+        if (!$this->validate($validation)) {
+            return redirect()->to('/register-agent');
+        }
+
+        $name = $this->request->getPost('name');
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+
+        $userModel = new UserModel();
+
+        $existingUser = $userModel->where('email', $email)->first();
+
+        if ($existingUser) {
+            return redirect()->to('/register-agent');
+        }
+
+        $userModel->insert([
+            'role_id'       => 2,
+            'name'          => $name,
+            'email'         => $email,
+            'password_hash' => password_hash($password, PASSWORD_DEFAULT)
+        ]);
+
+        return redirect()->to('/login');
     }
 
     public function logout()
     {
-        return "Déconnexion";
+        session()->destroy();
+
+        return redirect()->to('/login');
     }
 }
