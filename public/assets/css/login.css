@@ -4,7 +4,7 @@
 html, body { margin: 0; min-height: 100%; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif; color: var(--ink); background: var(--ink); -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
-button, input { font: inherit; color: inherit; }
+button, input, select { font: inherit; color: inherit; }
 :focus-visible { outline: calc(var(--u) * 1.5) solid var(--accent-ink); outline-offset: calc(var(--u) * 2); }
 [v-cloak] { display: none; }
 
@@ -55,8 +55,22 @@ body.is-closing .stage { animation: backdrop-exit .34s ease-in forwards; }
 .form input { height: calc(var(--u) * 27); padding: 0 calc(var(--u) * 11); border: calc(var(--u) * .8) solid var(--ink); border-radius: calc(var(--u) * 7); background: var(--paper); font-size: calc(var(--u) * 8); transition: border-color .2s, box-shadow .2s, transform .2s; }
 .form input::placeholder { color: var(--muted); }
 .form input:focus { outline: 0; border-color: var(--accent-ink); box-shadow: 0 0 0 calc(var(--u) * 2) rgba(104, 65, 17, .18); transform: translateY(-1px); }
-.form input + input { margin-top: calc(var(--u) * 14); }
+.form select {
+  height: calc(var(--u) * 27); padding: 0 calc(var(--u) * 11); border: calc(var(--u) * .8) solid var(--ink); border-radius: calc(var(--u) * 7);
+  background: var(--paper); font-size: calc(var(--u) * 8); cursor: pointer; appearance: none; color: var(--ink);
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px); background-size: 6px 6px, 6px 6px; background-repeat: no-repeat;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.form select:focus { outline: 0; border-color: var(--accent-ink); box-shadow: 0 0 0 calc(var(--u) * 2) rgba(104, 65, 17, .18); transform: translateY(-1px); }
+.form input + input,
+.form input + select,
+.form select + input,
+.form select + select { margin-top: calc(var(--u) * 14); }
 .form__row { display: flex; justify-content: space-between; gap: calc(var(--u) * 6); margin-top: calc(var(--u) * 7); line-height: calc(var(--u) * 10); font-size: calc(var(--u) * 7.5); }
+.form select + .form__row,
+.form input + .form__row,
+.form .form__row + .btn-login { margin-top: calc(var(--u) * 14); }
 
 .red { color: var(--accent-ink); font-weight: 700; white-space: nowrap; text-decoration-thickness: 1px; text-underline-offset: 2px; transition: color .2s; }
 .red:hover { color: var(--ink); text-decoration: underline; }

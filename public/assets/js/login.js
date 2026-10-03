@@ -1,5 +1,6 @@
 const { createApp, ref, reactive, computed, onMounted, onBeforeUnmount } = Vue
 const CFG = window.TERRA_NOVA
+const SERVICES = window.SERVICES || []
 
 const messages = {
   quote: '« TERRA NOVA, là où les rêves d’hier deviennent les horizons de demain. »', signUp: 'Créer un compte',
@@ -10,6 +11,11 @@ const messages = {
   errMany: 'Trop de tentatives', errNet: 'Serveur injoignable', errCsrf: 'Rechargez la page', ok: 'Bienvenue, {name} !',
   errName: 'Saisissez votre nom', errPasswordLength: 'Le mot de passe doit contenir au moins 8 caractères',
   errPasswordMatch: 'Les mots de passe ne correspondent pas', signupUnavailable: 'La création de compte doit être reliée au serveur.',
+  agentAccount: 'Vous êtes un agent ?',
+  agentSignUp: 'Inscription agent',
+  agentSignupTitle: 'Créer un compte agent',
+  service: 'Service',
+  errService: 'Sélectionnez un service',
 }
 
 createApp({
@@ -18,21 +24,40 @@ createApp({
       Object.entries(vars).reduce((s, [a, b]) => s.replace(`{${a}}`, b), messages[k] ?? k)
 
     /* ---------- Config (vient de PHP) ---------- */
-    const site = reactive({ loaded: false, brand: CFG.brand, heroPosition: CFG.heroPosition, images: CFG.images, links: CFG.links })
+    const site = reactive({
+      loaded: false,
+      brand: CFG.brand,
+      heroPosition: CFG.heroPosition,
+      images: CFG.images,
+      links: CFG.links
+    })
+
     const stageStyle = computed(() => ({ '--bg': `url("${site.images.background}")` }))
     const mode = ref('login')
+
     let navigationTimer
+
     function navigateTo(url) {
       document.body.classList.add('is-closing')
       const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 360
       navigationTimer = window.setTimeout(() => window.location.assign(url), delay)
     }
+
     function handleNavigation(event) {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+
       const link = event.target.closest('a[href]')
+
       if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return
+
       const destination = new URL(link.href, window.location.href)
-      if (destination.origin === location.origin && destination.pathname === location.pathname && destination.search === location.search) return
+
+      if (
+        destination.origin === location.origin &&
+        destination.pathname === location.pathname &&
+        destination.search === location.search
+      ) return
+
       event.preventDefault()
       navigateTo(destination.href)
     }
@@ -40,21 +65,32 @@ createApp({
     /* ---------- Panneau gauche : biseau à coins arrondis ---------- */
     const hero = ref(null)
     let observer
+
     function roundedPath(pts, r) {
       const n = pts.length
+
       const toward = (a, b) => {
-        const len = Math.hypot(b.x - a.x, b.y - a.y), k = Math.min(r, len / 2) / len
+        const len = Math.hypot(b.x - a.x, b.y - a.y)
+        const k = Math.min(r, len / 2) / len
+
         return `${(a.x + (b.x - a.x) * k).toFixed(1)} ${(a.y + (b.y - a.y) * k).toFixed(1)}`
       }
+
       return pts.map((p, i) =>
-        `${i ? 'L' : 'M'}${toward(p, pts[(i + n - 1) % n])} Q${p.x} ${p.y} ${toward(p, pts[(i + 1) % n])}`).join(' ') + 'Z'
+        `${i ? 'L' : 'M'}${toward(p, pts[(i + n - 1) % n])} Q${p.x} ${p.y} ${toward(p, pts[(i + 1) % n])}`
+      ).join(' ') + 'Z'
     }
+
     function shape() {
-      const el = hero.value, w = el.offsetWidth, h = el.offsetHeight
-      const SLANT = 0.31 // ← inclinaison de la diagonale (0 = droit)
-      const pts = mode.value === 'signup'
+      const el = hero.value
+      const w = el.offsetWidth
+      const h = el.offsetHeight
+      const SLANT = 0.31
+
+      const pts = mode.value === 'signup' || mode.value === 'agent'
         ? [{ x: 0, y: 0 }, { x: w, y: 0 }, { x: w, y: h }, { x: w * SLANT, y: h }]
         : [{ x: 0, y: 0 }, { x: w, y: 0 }, { x: w * (1 - SLANT), y: h }, { x: 0, y: h }]
+
       el.style.clipPath = `path('${roundedPath(pts, w * 0.08)}')`
     }
 
@@ -62,12 +98,32 @@ createApp({
     const form = reactive({ email: '', password: '' })
     const loading = ref(false)
     const status = reactive({ type: '', key: '', vars: {} })
-    const setStatus = (type = '', key = '', vars = {}) => Object.assign(status, { type, key, vars })
-    const signupForm = reactive({ name: '', email: '', password: '', confirmPassword: '' })
+
+    const setStatus = (type = '', key = '', vars = {}) =>
+      Object.assign(status, { type, key, vars })
+
+    const signupForm = reactive({
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    })
+
+    const agentForm = reactive({
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      service_id: ''
+    })
+
+    const services = SERVICES
+
     let csrf = CFG.csrf
 
     function switchMode(nextMode) {
       if (mode.value === nextMode) return
+
       mode.value = nextMode
       setStatus()
       shape()
@@ -118,20 +174,72 @@ createApp({
 
       signupFormElement.submit()
     }
+
+    function submitAgent() {
+      if (loading.value) return
+
+      if (!agentForm.name) {
+        return setStatus('error', 'errName')
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(agentForm.email)) {
+        return setStatus('error', 'errEmail')
+      }
+
+      if (agentForm.password.length < 8) {
+        return setStatus('error', 'errPasswordLength')
+      }
+
+      if (agentForm.password !== agentForm.confirmPassword) {
+        return setStatus('error', 'errPasswordMatch')
+      }
+
+      if (!agentForm.service_id) {
+        return setStatus('error', 'errService')
+      }
+
+      const agentFormElement = document.querySelector('.agent-form')
+
+      agentFormElement.action = '/register-agent'
+      agentFormElement.method = 'POST'
+
+      agentFormElement.submit()
+    }
+
     onMounted(() => {
       document.documentElement.lang = 'fr'
       document.addEventListener('click', handleNavigation)
+
       shape()
+
       observer = new ResizeObserver(shape)
       observer.observe(hero.value)
+
       site.loaded = true
     })
+
     onBeforeUnmount(() => {
       observer?.disconnect()
       document.removeEventListener('click', handleNavigation)
       window.clearTimeout(navigationTimer)
     })
 
-    return { t, site, stageStyle, hero, mode, switchMode, form, signupForm, loading, status, submit, submitSignup }
+    return {
+      t,
+      site,
+      stageStyle,
+      hero,
+      mode,
+      switchMode,
+      form,
+      signupForm,
+      agentForm,
+      services,
+      loading,
+      status,
+      submit,
+      submitSignup,
+      submitAgent
+    }
   },
 }).mount('#app')

@@ -9,21 +9,33 @@ class AuthController extends BaseController
     public function index()
     {
         $page = [
-        'brand' => 'TERRA NOVA',
-        'heroPosition' => 'center',
-        'images' => [
-            'hero' => base_url('assets/images/hero.jpg'),
-            'background' => base_url('assets/images/background.jpg')
-        ],
-        'links' => [
-            'linkedin' => '#',
-            'instagram' => '#'
-        ],
-        'loginUrl' => base_url('login'),
-        'csrf' => csrf_hash(),
-        'csrfToken' => csrf_token()
-    ];
-        return view('auth/login', ['page' => $page]);
+            'brand' => 'TERRA NOVA',
+            'heroPosition' => 'center',
+            'images' => [
+                'hero' => base_url('assets/images/hero.jpg'),
+                'background' => base_url('assets/images/background.jpg')
+            ],
+            'links' => [
+                'linkedin' => '#',
+                'instagram' => '#'
+            ],
+            'loginUrl' => base_url('login'),
+            'csrf' => csrf_hash(),
+            'csrfToken' => csrf_token()
+        ];
+
+        $db = \Config\Database::connect();
+
+        $services = $db->table('services')
+            ->select('id, name')
+            ->orderBy('name', 'ASC')
+            ->get()
+            ->getResultArray();
+
+        return view('auth/login', [
+            'page' => $page,
+            'services' => $services
+        ]);
     }
 
     public function login()
@@ -107,33 +119,36 @@ class AuthController extends BaseController
     public function registerAgent()
     {
         if ($this->request->getMethod() === 'GET') {
-            return view('auth/register-agent');
+            return redirect()->to('/login');
         }
 
         $validation = [
-            'name'     => 'required|min_length[2]',
-            'email'    => 'required|valid_email',
-            'password' => 'required|min_length[8]'
+            'name'       => 'required|min_length[2]',
+            'email'      => 'required|valid_email',
+            'password'   => 'required|min_length[8]',
+            'service_id' => 'required|is_natural_no_zero'
         ];
 
         if (!$this->validate($validation)) {
-            return redirect()->to('/register-agent');
+            return redirect()->to('/login');
         }
 
-        $name = $this->request->getPost('name');
-        $email = $this->request->getPost('email');
-        $password = $this->request->getPost('password');
+        $name      = $this->request->getPost('name');
+        $email     = $this->request->getPost('email');
+        $password  = $this->request->getPost('password');
+        $serviceId = $this->request->getPost('service_id');
 
         $userModel = new UserModel();
 
         $existingUser = $userModel->where('email', $email)->first();
 
         if ($existingUser) {
-            return redirect()->to('/register-agent');
+            return redirect()->to('/login');
         }
 
         $userModel->insert([
             'role_id'       => 2,
+            'service_id'    => $serviceId,
             'name'          => $name,
             'email'         => $email,
             'password_hash' => password_hash($password, PASSWORD_DEFAULT)
