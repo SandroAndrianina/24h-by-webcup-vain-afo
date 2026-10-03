@@ -9,7 +9,7 @@
 <body>
 <div id="app" v-cloak>
   <main class="stage" :class="{ 'is-ready': site.loaded }" :style="stageStyle">
-    <section class="card">
+    <section class="card" :class="{ 'is-signup': mode === 'signup' }">
       <!-- GAUCHE -->
       <aside ref="hero" class="hero">
         <img class="hero__img" :src="site.images.hero" :style="{ objectPosition: site.heroPosition }" alt="">
@@ -21,22 +21,39 @@
         <div class="panel__body">
           <img class="brand-logo" src="<?= base_url('assets/images/logo.png') ?>" alt="<?= esc($page['brand']) ?>" width="683" height="352">
 
-          <form class="form" novalidate @submit.prevent="submit">
-            <input v-model.trim="form.email" type="email" autocomplete="email" :placeholder="t('email')" :aria-label="t('email')">
-            <input v-model="form.password" type="password" autocomplete="current-password" :placeholder="t('password')" :aria-label="t('password')">
+          <div class="form-stack">
+            <form class="form login-form" :class="{ 'is-active': mode === 'login' }" :aria-hidden="mode !== 'login'" :inert="mode !== 'login'" novalidate @submit.prevent="submit">
+              <input v-model.trim="form.email" type="email" autocomplete="email" :placeholder="t('email')" :aria-label="t('email')">
+              <input v-model="form.password" type="password" autocomplete="current-password" :placeholder="t('password')" :aria-label="t('password')">
 
-            <div class="form__row">
-              <p class="status" :class="'is-' + status.type" role="status">{{ status.key && t(status.key, status.vars) }}</p>
-            </div>
+              <div class="form__row">
+                <p class="status" :class="'is-' + status.type" role="status">{{ status.key && t(status.key, status.vars) }}</p>
+              </div>
 
-            <button class="btn-login" type="submit" :disabled="loading">
-              <i v-if="loading" class="spinner"></i><template v-else>{{ t('login') }}</template>
-            </button>
+              <button class="btn-login" type="submit" :disabled="loading">
+                <i v-if="loading" class="spinner"></i><template v-else>{{ t('login') }}</template>
+              </button>
 
-            <p class="signup">{{ t('noAccount') }} <a class="red" :href="site.links.signUp">{{ t('signUp') }}</a></p>
-          </form>
+              <p class="signup">{{ t('noAccount') }} <button class="red form__switch" type="button" @click="switchMode('signup')">{{ t('signUp') }}</button></p>
+            </form>
 
-          <div class="social">
+            <form class="form signup-form" :class="{ 'is-active': mode === 'signup' }" :aria-hidden="mode !== 'signup'" :inert="mode !== 'signup'" novalidate @submit.prevent="submitSignup">
+              <h2 class="form__title">{{ t('signupTitle') }}</h2>
+              <input v-model.trim="signupForm.name" type="text" autocomplete="name" :placeholder="t('name')" :aria-label="t('name')">
+              <input v-model.trim="signupForm.email" type="email" autocomplete="email" :placeholder="t('email')" :aria-label="t('email')">
+              <input v-model="signupForm.password" type="password" autocomplete="new-password" :placeholder="t('password')" :aria-label="t('password')">
+              <input v-model="signupForm.confirmPassword" type="password" autocomplete="new-password" :placeholder="t('confirmPassword')" :aria-label="t('confirmPassword')">
+
+              <div class="form__row">
+                <p class="status" :class="'is-' + status.type" role="status">{{ status.key && t(status.key, status.vars) }}</p>
+              </div>
+
+              <button class="btn-login" type="submit" :disabled="loading">{{ t('signupAction') }}</button>
+              <p class="signup">{{ t('alreadyRegistered') }} <button class="red form__switch" type="button" @click="switchMode('login')">{{ t('login') }}</button></p>
+            </form>
+          </div>
+
+          <div v-if="mode === 'login'" class="social">
             <a :href="site.links.linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
             </a>

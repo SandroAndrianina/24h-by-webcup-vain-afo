@@ -19,7 +19,7 @@ button, input { font: inherit; color: inherit; }
 [v-cloak] { display: none; }
 
 .stage { min-height: 100vh; display: grid; place-items: center; background: $ink var(--bg) center / cover no-repeat; }
-.card { display: flex; width: u(643); height: u(468); overflow: hidden; border-radius: u(16); background: $paper; opacity: 0; transform: translateY(24px) scale(.975); filter: blur(8px); transform-origin: center; }
+.card { position: relative; display: flex; width: u(643); height: u(468); overflow: hidden; border-radius: u(16); background: $paper; opacity: 0; transform: translateY(24px) scale(.975); filter: blur(8px); transform-origin: center; }
 .is-ready .card { animation: page-enter .85s cubic-bezier(.2, .75, .25, 1) forwards; }
 body.is-closing { pointer-events: none; }
 body.is-closing .card { animation: page-exit .34s cubic-bezier(.55, 0, .8, .35) forwards; }
@@ -33,10 +33,14 @@ body.is-closing .stage { animation: backdrop-exit .34s ease-in forwards; }
 
 /* ===== Panneau gauche ===== */
 .hero {
-  position: relative; flex: 0 0 u(350); margin: u(10) 0 u(16) u(16); overflow: hidden;
+  position: relative; z-index: 2; flex: 0 0 u(350); margin: u(10) 0 u(16) u(16); overflow: hidden;
   border-radius: u(26); background: $ink;
   clip-path: polygon(0 0, 100% 0, 69% 100%, 0 100%); // remplacé en JS (coins arrondis)
+  transition: transform .72s cubic-bezier(.2, .75, .25, 1), margin .72s cubic-bezier(.2, .75, .25, 1), clip-path .72s cubic-bezier(.2, .75, .25, 1);
 }
+.panel { z-index: 1; transition: transform .72s cubic-bezier(.2, .75, .25, 1); }
+.card.is-signup .hero { margin-left: 0; margin-right: u(16); transform: translateX(79.14%); }
+.card.is-signup .panel { transform: translateX(-132.14%); }
 .hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .is-ready .hero__img { animation: hero-drift 18s ease-in-out infinite alternate; }
 .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(33, 29, 28, .35), transparent 28%, rgba(33, 29, 28, .72) 100%); }
@@ -53,8 +57,11 @@ body.is-closing .stage { animation: backdrop-exit .34s ease-in forwards; }
 .brand-logo { display: block; align-self: center; width: 100%; max-width: u(150); height: auto; margin: 0 0 u(24); object-fit: contain; }
 .is-ready .brand-logo { animation: rise-in .6s .3s both; }
 
-.form { display: flex; flex-direction: column; margin-top: u(17); }
-.is-ready .form { animation: rise-in .6s .5s both; }
+.form-stack { display: grid; width: 100%; }
+.form { grid-area: 1 / 1; display: flex; flex-direction: column; margin-top: u(17); opacity: 0; visibility: hidden; transform: translateX(12px); pointer-events: none; transition: opacity .24s ease, transform .24s ease, visibility 0s linear .24s; }
+.form.is-active { position: relative; z-index: 1; opacity: 1; visibility: visible; transform: translateX(0); pointer-events: auto; transition-delay: 0s; }
+.login-form:not(.is-active) { transform: translateX(-12px); }
+.form__title { margin: 0 0 u(8); color: $ink; font-size: u(15); font-weight: 600; line-height: 1.2; text-align: center; }
 .form input { height: u(27); padding: 0 u(11); border: u(.8) solid $ink; border-radius: u(7); background: $paper; font-size: u(8); transition: border-color .2s, box-shadow .2s, transform .2s; }
 .form input::placeholder { color: $muted; }
 .form input:focus { outline: 0; border-color: $accent-ink; box-shadow: 0 0 0 u(2) rgba(104, 65, 17, .18); transform: translateY(-1px); }
@@ -79,6 +86,7 @@ body.is-closing .stage { animation: backdrop-exit .34s ease-in forwards; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 .signup { margin: u(7) 0 0; font-size: u(7.5); line-height: u(10); text-align: center; color: rgba(33, 29, 28, .75); }
+.form__switch { border: 0; padding: 0; background: none; font: inherit; cursor: pointer; }
 .social { display: flex; justify-content: center; gap: u(7); margin-top: u(18); }
 .is-ready .social { animation: rise-in .6s .62s both; }
 .social a { display: grid; place-items: center; width: u(22); height: u(22); border-radius: 50%; transition: color .2s, background .2s, transform .2s; }
@@ -94,6 +102,8 @@ body.is-closing .stage { animation: backdrop-exit .34s ease-in forwards; }
   .stage { padding: 16px 0; }
   .card { width: min(94vw, 460px); height: auto; flex-direction: column; padding-bottom: u(24); }
   .hero { flex: none; height: u(190); margin: u(10); clip-path: none !important; }
+  .card.is-signup .hero { margin: u(10); transform: none; }
   .panel { flex-direction: column; align-items: center; }
+  .card.is-signup .panel { transform: none; }
   .panel__body { margin-top: u(36); }
 }

@@ -4,8 +4,12 @@ const CFG = window.TERRA_NOVA
 const messages = {
   quote: '« TERRA NOVA, là où les rêves d’hier deviennent les horizons de demain. »', signUp: 'Créer un compte',
   email: 'Adresse e-mail', password: 'Mot de passe', login: 'Connexion', noAccount: 'Pas encore de compte ?',
+  signupTitle: 'Créer un compte', signupAction: 'Créer mon compte', name: 'Nom complet',
+  confirmPassword: 'Confirmer le mot de passe', alreadyRegistered: 'Déjà inscrit ?',
   errEmail: 'Adresse e-mail invalide', errPass: 'Mot de passe requis', errBad: 'Identifiants incorrects',
   errMany: 'Trop de tentatives', errNet: 'Serveur injoignable', errCsrf: 'Rechargez la page', ok: 'Bienvenue, {name} !',
+  errName: 'Saisissez votre nom', errPasswordLength: 'Le mot de passe doit contenir au moins 8 caractères',
+  errPasswordMatch: 'Les mots de passe ne correspondent pas', signupUnavailable: 'La création de compte doit être reliée au serveur.',
 }
 
 createApp({
@@ -16,6 +20,7 @@ createApp({
     /* ---------- Config (vient de PHP) ---------- */
     const site = reactive({ loaded: false, brand: CFG.brand, heroPosition: CFG.heroPosition, images: CFG.images, links: CFG.links })
     const stageStyle = computed(() => ({ '--bg': `url("${site.images.background}")` }))
+    const mode = ref('login')
     let navigationTimer
     function navigateTo(url) {
       document.body.classList.add('is-closing')
@@ -47,7 +52,9 @@ createApp({
     function shape() {
       const el = hero.value, w = el.offsetWidth, h = el.offsetHeight
       const SLANT = 0.31 // ← inclinaison de la diagonale (0 = droit)
-      const pts = [{ x: 0, y: 0 }, { x: w, y: 0 }, { x: w * (1 - SLANT), y: h }, { x: 0, y: h }]
+      const pts = mode.value === 'signup'
+        ? [{ x: 0, y: 0 }, { x: w, y: 0 }, { x: w, y: h }, { x: w * SLANT, y: h }]
+        : [{ x: 0, y: 0 }, { x: w, y: 0 }, { x: w * (1 - SLANT), y: h }, { x: 0, y: h }]
       el.style.clipPath = `path('${roundedPath(pts, w * 0.08)}')`
     }
 
@@ -56,7 +63,15 @@ createApp({
     const loading = ref(false)
     const status = reactive({ type: '', key: '', vars: {} })
     const setStatus = (type = '', key = '', vars = {}) => Object.assign(status, { type, key, vars })
+    const signupForm = reactive({ name: '', email: '', password: '', confirmPassword: '' })
     let csrf = CFG.csrf
+
+    function switchMode(nextMode) {
+      if (mode.value === nextMode) return
+      mode.value = nextMode
+      setStatus()
+      shape()
+    }
 
     async function login(email, password) {
       const res = await fetch(CFG.loginUrl, {
@@ -87,6 +102,15 @@ createApp({
         loading.value = false
       }
     }
+
+    function submitSignup() {
+      if (loading.value) return
+      if (!signupForm.name) return setStatus('error', 'errName')
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(signupForm.email)) return setStatus('error', 'errEmail')
+      if (signupForm.password.length < 8) return setStatus('error', 'errPasswordLength')
+      if (signupForm.password !== signupForm.confirmPassword) return setStatus('error', 'errPasswordMatch')
+      setStatus('error', 'signupUnavailable')
+    }
     onMounted(() => {
       document.documentElement.lang = 'fr'
       document.addEventListener('click', handleNavigation)
@@ -101,6 +125,6 @@ createApp({
       window.clearTimeout(navigationTimer)
     })
 
-    return { t, site, stageStyle, hero, form, loading, status, submit }
+    return { t, site, stageStyle, hero, mode, switchMode, form, signupForm, loading, status, submit, submitSignup }
   },
 }).mount('#app')
