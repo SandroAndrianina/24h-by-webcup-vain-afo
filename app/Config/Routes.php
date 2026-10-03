@@ -22,3 +22,18 @@ $routes->get('/logout', 'AuthController::logout');
 $routes->get('/admin', 'AdminController::index', ['filter' => 'admin']);
 $routes->get('/agent', 'AgentController::index', ['filter' => 'agent']);
 $routes->get('/citoyen', 'CitoyenController::index', ['filter' => 'auth']);
+
+
+
+$routes->group('citoyen', ['filter' => 'auth'], static function ($routes) {
+    $routes->get('requests',        'Citizen\RequestController::index');
+    $routes->get('requests/new',    'Citizen\RequestController::create');
+    $routes->post('requests',       'Citizen\RequestController::store');
+    $routes->get('requests/(:num)', 'Citizen\RequestController::show/$1');
+
+    $routes->get('contact',         'Citizen\ContactController::create');
+    $routes->post('contact',        'Citizen\ContactController::store');
+
+    $routes->get('profile',         'Citizen\ProfileController::show');
+    $routes->post('profile',        'Citizen\ProfileController::update');
+});
