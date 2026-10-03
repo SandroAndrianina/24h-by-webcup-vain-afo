@@ -894,3 +894,9 @@ INFO - 2026-10-03 19:07:16 --> CSRF token verified.
 INFO - 2026-10-03 19:07:23 --> CSRF token verified.
 DEBUG - 2026-10-03 19:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-10-03 19:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 20:47:56 --> REDIRECTED ROUTE at http://localhost:8080/services
+DEBUG - 2026-10-03 20:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 20:52:13 --> CSRF token verified.
+INFO - 2026-10-03 20:52:23 --> CSRF token verified.
+INFO - 2026-10-03 20:52:58 --> REDIRECTED ROUTE at http://localhost:8080/services
+DEBUG - 2026-10-03 20:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
