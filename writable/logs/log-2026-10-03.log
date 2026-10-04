@@ -902,3 +902,64 @@ INFO - 2026-10-03 22:20:29 --> CSRF token verified.
 DEBUG - 2026-10-03 22:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-10-03 22:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-10-03 22:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-03 22:42:04 --> Error connecting to the database: mysqli_sql_exception: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu in C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('tnr1.hodi.host', 'vahinrsquoafo_t...', Object(SensitiveParameterValue), 'vahinrsquoafo_t...', 3306, '', 0)
+#1 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#4 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\app\Controllers\AuthController.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(974): App\Controllers\AuthController->index()
+#6 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\rewrite.php(44): require_once('C:\\Users\\Iraka\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu in C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#3 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\app\Controllers\AuthController.php(32): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(974): App\Controllers\AuthController->index()
+#5 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#6 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\Users\Iraka\Documents\GitHub\24h-by-webcup-vain-afo\system\rewrite.php(44): require_once('C:\\Users\\Iraka\\...')
+#11 {main}
+CRITICAL - 2026-10-03 22:42:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`
+FROM `services`
+ORDER BY `name` ASC', [], false)
+ 3 APPPATH\Controllers\AuthController.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Iraka\\Documents\\GitHub\\24h-by-webcup-vain-afo\\public\\index.php')
+INFO - 2026-10-03 22:42:32 --> CSRF token verified.
+DEBUG - 2026-10-03 22:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 22:42:53 --> CSRF token verified.
+INFO - 2026-10-03 22:43:16 --> CSRF token verified.
+INFO - 2026-10-03 22:43:24 --> CSRF token verified.
+DEBUG - 2026-10-03 22:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-10-03 22:49:09 --> CSRF token verified.
+INFO - 2026-10-03 22:49:14 --> CSRF token verified.
+DEBUG - 2026-10-03 22:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-03 22:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

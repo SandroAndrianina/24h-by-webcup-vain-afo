@@ -2,13 +2,28 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\UserModel;
 
 class AgentController extends BaseController
 {
     public function index()
     {
-        return "Dashboard Agent";
+        $userModel = new UserModel();
+
+        $agent = $userModel
+            ->where('id', session()->get('user_id'))
+            ->first();
+
+        $db = \Config\Database::connect();
+
+        $service = $db->table('services')
+            ->where('id', $agent['service_id'])
+            ->get()
+            ->getRowArray();
+
+        return view('agent/dashboard', [
+            'agent' => $agent,
+            'service' => $service
+        ]);
     }
 }
