@@ -114,3 +114,105 @@ body { background: var(--ink); color: #fff; font-family: var(--apple-font); -web
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+/* Loading feedback sur le bouton START */
+.launch__start {
+  position: relative;
+}
+.launch__start.is-loading {
+  opacity: .85;
+  pointer-events: none;
+  animation: none;
+}
+.launch__start.is-loading::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  border: 2px solid rgba(33, 29, 28, .25);
+  border-top-color: var(--ink);
+  border-radius: 50%;
+  vertical-align: middle;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Spinner extérieur, sous le bouton START */
+.launch__spinner {
+  display: none;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.launch__spinner span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: dot-pulse 1s ease-in-out infinite;
+}
+.launch__spinner span:nth-child(2) { animation-delay: .15s; }
+.launch__spinner span:nth-child(3) { animation-delay: .3s; }
+
+.launch.is-loading .launch__spinner { display: flex; }
+.launch.is-loading .launch__start {
+  opacity: .6;
+  pointer-events: none;
+  animation: none;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { opacity: .3; transform: scale(.8); }
+  50%      { opacity: 1;  transform: scale(1.15); }
+}
+
+/* Loading initial */
+.launch__preload {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 8px;
+}
+.launch__preload span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: dot-pulse 1s ease-in-out infinite;
+}
+.launch__preload span:nth-child(2) { animation-delay: .15s; }
+.launch__preload span:nth-child(3) { animation-delay: .3s; }
+
+@keyframes dot-pulse {
+  0%, 100% { opacity: .3; transform: scale(.8); }
+  50%      { opacity: 1;  transform: scale(1.15); }
+}
+
+.launch__preload {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.launch__preload span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: dot-pulse 1s ease-in-out infinite;
+}
+.launch__preload span:nth-child(2) { animation-delay: .15s; }
+.launch__preload span:nth-child(3) { animation-delay: .3s; }
+
+.launch__content {
+  transition: opacity .5s ease;
+}
+.launch__content.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}

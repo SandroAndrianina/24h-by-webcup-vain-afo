@@ -124,5 +124,12 @@
 </div>
 
 <?= view('partials/a11y_widget') ?>
+
+<?php if ((session()->get('lang') ?? 'fr') === 'fr'): ?>
+<script>
+  // Réchauffe la version EN en arrière-plan (invisible)
+  fetch('<?= site_url('prewarm/en') ?>', { credentials: 'same-origin' }).catch(()=>{});
+</script>
+<?php endif; ?>
 </body>
 </html>
