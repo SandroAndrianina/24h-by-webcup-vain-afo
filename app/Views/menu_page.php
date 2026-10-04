@@ -10,56 +10,6 @@
 <script src="<?= base_url('assets/js/accordion.js') ?>" defer></script>
 </head>
 <body>
-
-<?php if (!empty($activeAlert)): ?>
-  <div class="alert-banner" role="alert" id="alertBanner">
-    <span class="alert-banner__dot"></span>
-    <strong><?= esc($activeAlert['title']) ?></strong>
-    <span><?= esc($activeAlert['content_trim']) ?>…</span>
-    <?php if (!empty($alertAdvice)): ?>
-      <button type="button" class="alert-banner__toggle"
-              aria-expanded="false"
-              aria-controls="alertAdvice"
-              onclick="(function(btn){
-                var p=document.getElementById('alertAdvice');
-                if(p.hasAttribute('hidden')){ p.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); }
-                else { p.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }
-              })(this)">
-        Recommandations IA ▾
-      </button>
-    <?php endif; ?>
-    <a href="<?= site_url('menu?regen=1') ?>" class="alert-banner__regen" title="Régénérer les recommandations">
-      ↻ Régénérer
-    </a>
-    <button class="alert-banner__close" aria-label="Fermer"
-            onclick="document.getElementById('alertBanner')?.remove(); document.getElementById('alertAdvice')?.remove();">×</button>
-  </div>
-
-  <?php if (!empty($alertAdvice)): ?>
-  <section id="alertAdvice" class="alert-advice" hidden aria-label="Recommandations IA">
-    <header class="alert-advice__head">
-      <span class="alert-advice__badge">IA</span>
-      <h2>Recommandations personnalisées</h2>
-    </header>
-
-    <ul class="advice-list">
-      <?php foreach ($alertAdvice['tips'] as $tip): ?>
-        <li>
-          <span class="advice-list__icon">✓</span>
-          <span><?= esc($tip) ?></span>
-        </li>
-      <?php endforeach; ?>
-    </ul>
-
-    <p class="alert-advice__foot">
-      Généré par <strong><?= esc($alertAdvice['model']) ?></strong>
-      en <?= esc($alertAdvice['time_ms']) ?> ms
-      · Cache : <?= $alertAdvice['cached'] ? 'oui' : 'non' ?>
-    </p>
-  </section>
-  <?php endif; ?>
-<?php endif; ?>
-
 <div id="app" class="page">
   <header class="topbar">
     <a class="brand" href="<?= site_url('menu') ?>" aria-label="TERRA NOVA"><img src="<?= base_url('assets/images/logo horizontale.png') ?>" alt="TERRA NOVA"></a>
@@ -71,8 +21,13 @@
         <a class="nav-button" href="<?= site_url('admin/dashboard') ?>">Administration</a>
       <?php endif; ?>
 
-      <a class="nav-button" href="<?= site_url('lang/' . (session()->get('lang') === 'en' ? 'fr' : 'en')) ?>">
-        <?= lang('App.locale.switch') ?>
+      <?php $currentLang = session()->get('lang') ?? 'fr'; ?>
+      <a class="language-switch <?= $currentLang === 'en' ? 'is-en' : 'is-fr' ?>"
+         href="<?= site_url('lang/' . ($currentLang === 'en' ? 'fr' : 'en')) ?>"
+         role="switch" aria-checked="<?= $currentLang === 'en' ? 'true' : 'false' ?>"
+         aria-label="<?= $currentLang === 'en' ? 'Langue active : anglais. Passer en français.' : 'Langue active : français. Passer en anglais.' ?>"
+         title="<?= $currentLang === 'en' ? 'Passer en français' : 'Switch to English' ?>">
+        <span class="language-switch__label" data-lang="fr">FR</span><span class="language-switch__track" aria-hidden="true"><i></i></span><span class="language-switch__label" data-lang="en">EN</span>
       </a>
 
       <?php if (session()->get('logged_in')): ?>
@@ -82,6 +37,50 @@
       <?php endif; ?>
     </nav>
   </header>
+
+  <?php if (!empty($activeAlert)): ?>
+    <section class="alert-banner" role="region" aria-label="Alerte active" id="alertBanner">
+      <div class="alert-banner__identity"><span class="alert-banner__dot"></span><span>ALERTE ACTIVE</span></div>
+      <div class="alert-banner__message">
+        <strong><?= esc($activeAlert['title']) ?></strong>
+        <p><?= esc($activeAlert['content_trim']) ?>…</p>
+      </div>
+      <div class="alert-banner__actions">
+        <?php if (!empty($alertAdvice)): ?>
+          <button type="button" class="alert-banner__toggle"
+                  aria-expanded="false"
+                  aria-controls="alertAdvice"
+                  onclick="(function(btn){
+                    var p=document.getElementById('alertAdvice');
+                    if(p.hasAttribute('hidden')){ p.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); }
+                    else { p.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }
+                  })(this)">
+            Recommandations IA <span aria-hidden="true">⌄</span>
+          </button>
+        <?php endif; ?>
+        <a href="<?= site_url('menu?regen=1') ?>" class="alert-banner__regen" title="Régénérer les recommandations" aria-label="Régénérer les recommandations">↻</a>
+        <button class="alert-banner__close" aria-label="Fermer l’alerte"
+                onclick="document.getElementById('alertBanner')?.remove(); document.getElementById('alertAdvice')?.remove();">×</button>
+      </div>
+    </section>
+
+    <?php if (!empty($alertAdvice)): ?>
+      <section id="alertAdvice" class="alert-advice" hidden aria-label="Recommandations IA">
+        <header class="alert-advice__head">
+          <span class="alert-advice__badge">IA</span>
+          <div><h2>Recommandations personnalisées</h2><p>Suggestions liées à l’alerte active</p></div>
+        </header>
+        <ul class="advice-list">
+          <?php foreach ($alertAdvice['tips'] as $i => $tip): ?>
+            <li><span class="advice-list__icon"><?= str_pad($i + 1, 2, '0', STR_PAD_LEFT) ?></span><span><?= esc($tip) ?></span></li>
+          <?php endforeach; ?>
+        </ul>
+        <p class="alert-advice__foot">
+          Généré par <strong><?= esc($alertAdvice['model']) ?></strong> · <?= esc($alertAdvice['time_ms']) ?> ms · Cache <?= $alertAdvice['cached'] ? 'actif' : 'inactif' ?>
+        </p>
+      </section>
+    <?php endif; ?>
+  <?php endif; ?>
 
   <header class="head"><h1>{{ name }}</h1></header>
 

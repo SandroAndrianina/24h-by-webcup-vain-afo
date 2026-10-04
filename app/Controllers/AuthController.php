@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\ServiceModel;
 
 class AuthController extends BaseController
 {
@@ -119,7 +120,17 @@ class AuthController extends BaseController
     public function registerAgent()
     {
         if ($this->request->getMethod() === 'GET') {
-            return redirect()->to('/login');
+            $services = [];
+            try {
+                $services = (new ServiceModel())
+                    ->select('id, name')
+                    ->orderBy('name', 'ASC')
+                    ->findAll();
+            } catch (\Throwable $exception) {
+                log_message('warning', 'Services unavailable on agent registration: {message}', ['message' => $exception->getMessage()]);
+            }
+
+            return view('auth/register-agent', ['services' => $services]);
         }
 
         $validation = [

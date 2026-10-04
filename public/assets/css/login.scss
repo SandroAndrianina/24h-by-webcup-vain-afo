@@ -52,9 +52,9 @@ body.is-closing .stage { animation: backdrop-exit .34s ease-in forwards; }
 .is-ready .hero__quote { animation: rise-in .65s .2s both; }
 
 /* ===== Panneau droit ===== */
-.panel { position: relative; flex: 1; display: flex; justify-content: center; }
-.panel__body { width: u(184); margin-top: u(82); display: flex; flex-direction: column; }
-.brand-logo { display: block; align-self: center; width: 100%; max-width: u(150); height: auto; margin: 0 0 u(24); object-fit: contain; }
+.panel { position: relative; flex: 1; display: flex; align-items: center; justify-content: center; }
+.panel__body { width: u(184); display: flex; flex-direction: column; }
+.brand-logo { display: block; align-self: center; width: 100%; max-width: u(138); height: auto; margin: 0 0 u(18); object-fit: contain; }
 .is-ready .brand-logo { animation: rise-in .6s .3s both; }
 
 .form-stack { display: grid; width: 100%; }
