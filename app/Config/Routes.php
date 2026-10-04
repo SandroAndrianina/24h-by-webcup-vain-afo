@@ -1,5 +1,5 @@
 <?php
-
+require APPPATH . 'Modules/Requests/Http/Routes.php';
 use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
