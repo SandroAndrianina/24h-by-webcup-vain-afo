@@ -8,9 +8,20 @@ class AnnouncementModel extends Model
 {
     protected $table          = 'announcements';
     protected $primaryKey     = 'id';
-    protected $allowedFields  = ['title', 'content', 'is_alert', 'published_at', 'author_id'];
+
+    protected $allowedFields  = [
+        'title',
+        'content',
+        'is_alert',
+        'published_at',
+        'author_id',
+        'alert_category'
+    ];
+
     protected $returnType     = 'array';
+
     protected $useTimestamps  = false;
+
     protected $useSoftDeletes = true;
     protected $deletedField   = 'deleted_at';
 
