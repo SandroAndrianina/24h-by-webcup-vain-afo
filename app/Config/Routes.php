@@ -29,3 +29,5 @@ $routes->get('announcements/(:num)', 'Announcements::show/$1');
 $routes->get('services/(:num)', 'Service::show/$1');
 
 $routes->get('lang/(:segment)', 'Locale::switch/$1');
+
+$routes->get('menu/regen-alert', 'Menu::regenAlert');

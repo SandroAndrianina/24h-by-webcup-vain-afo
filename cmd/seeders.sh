@@ -1,0 +1,1 @@
+php spark db:seed RoleSeeder && php spark db:seed UserSeeder && php spark db:seed ServiceSeeder && php spark db:seed AnnouncementSeeder && php spark db:seed ContactMessageSeeder

@@ -12,17 +12,57 @@
 <body>
 
 <?php if (!empty($activeAlert)): ?>
-  <div class="alert-banner" role="alert">
+  <div class="alert-banner" role="alert" id="alertBanner">
     <span class="alert-banner__dot"></span>
     <strong><?= esc($activeAlert['title']) ?></strong>
     <span><?= esc($activeAlert['content_trim']) ?>…</span>
-    <button class="alert-banner__close" aria-label="Fermer" onclick="this.parentElement.remove()">×</button>
+    <?php if (!empty($alertAdvice)): ?>
+      <button type="button" class="alert-banner__toggle"
+              aria-expanded="false"
+              aria-controls="alertAdvice"
+              onclick="(function(btn){
+                var p=document.getElementById('alertAdvice');
+                if(p.hasAttribute('hidden')){ p.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); }
+                else { p.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }
+              })(this)">
+        Recommandations IA ▾
+      </button>
+    <?php endif; ?>
+    <a href="<?= site_url('menu?regen=1') ?>" class="alert-banner__regen" title="Régénérer les recommandations">
+      ↻ Régénérer
+    </a>
+    <button class="alert-banner__close" aria-label="Fermer"
+            onclick="document.getElementById('alertBanner')?.remove(); document.getElementById('alertAdvice')?.remove();">×</button>
   </div>
+
+  <?php if (!empty($alertAdvice)): ?>
+  <section id="alertAdvice" class="alert-advice" hidden aria-label="Recommandations IA">
+    <header class="alert-advice__head">
+      <span class="alert-advice__badge">IA</span>
+      <h2>Recommandations personnalisées</h2>
+    </header>
+
+    <ul class="advice-list">
+      <?php foreach ($alertAdvice['tips'] as $tip): ?>
+        <li>
+          <span class="advice-list__icon">✓</span>
+          <span><?= esc($tip) ?></span>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+
+    <p class="alert-advice__foot">
+      Généré par <strong><?= esc($alertAdvice['model']) ?></strong>
+      en <?= esc($alertAdvice['time_ms']) ?> ms
+      · Cache : <?= $alertAdvice['cached'] ? 'oui' : 'non' ?>
+    </p>
+  </section>
+  <?php endif; ?>
 <?php endif; ?>
 
 <div id="app" class="page">
   <header class="topbar">
-    <a class="brand" href="<?= site_url('menu') ?>" aria-label="TERRA NOVA, liste des services"><img src="<?= base_url('assets/images/logo horizontale.png') ?>" alt="TERRA NOVA"></a>
+    <a class="brand" href="<?= site_url('menu') ?>" aria-label="TERRA NOVA"><img src="<?= base_url('assets/images/logo horizontale.png') ?>" alt="TERRA NOVA"></a>
     <nav class="top-nav" aria-label="Navigation principale">
       <a class="nav-button" href="<?= site_url('menu') ?>"><?= lang('App.nav.home') ?></a>
       <a class="nav-button" href="<?= site_url('announcements') ?>"><?= lang('App.nav.announcements') ?></a>

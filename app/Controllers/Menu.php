@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\AnnouncementModel;
 use App\Models\ServiceModel;
+use App\Shared\Services\AiAdvisor;
 use App\Shared\Services\AiTranslator;
 
 class Menu extends BaseController
@@ -19,7 +20,6 @@ class Menu extends BaseController
 
         $lang = session()->get('lang') ?? 'fr';
 
-        // Si FR → on ne traduit rien
         if ($lang !== 'fr') {
             $toTranslate = [];
             foreach ($services as $i => $s) {
@@ -31,36 +31,51 @@ class Menu extends BaseController
                 $toTranslate["a{$i}_desc"]  = mb_substr(strip_tags($a['content']), 0, 140);
             }
             if ($activeAlert) {
-                $toTranslate["alert_title"] = $activeAlert['title'];
-                $toTranslate["alert_desc"]  = mb_substr(strip_tags($activeAlert['content']), 0, 120);
+                $toTranslate['alert_title'] = $activeAlert['title'];
+                $toTranslate['alert_desc']  = mb_substr(strip_tags($activeAlert['content']), 0, 120);
             }
 
-            $translations = AiTranslator::translateBatch($toTranslate, $lang);
+            $tr = AiTranslator::translateBatch($toTranslate, $lang);
 
             foreach ($services as $i => &$s) {
-                $s['name']              = $translations["s{$i}_name"] ?? $s['name'];
-                $s['short_description'] = $translations["s{$i}_desc"] ?? $s['short_description'];
+                $s['name']              = $tr["s{$i}_name"] ?? $s['name'];
+                $s['short_description'] = $tr["s{$i}_desc"] ?? $s['short_description'];
             }
             unset($s);
 
             foreach ($announcements as $i => &$a) {
-                $a['title']        = $translations["a{$i}_title"] ?? $a['title'];
-                $a['content_trim'] = $translations["a{$i}_desc"]  ?? mb_substr(strip_tags($a['content']), 0, 140);
+                $a['title']        = $tr["a{$i}_title"] ?? $a['title'];
+                $a['content_trim'] = $tr["a{$i}_desc"]  ?? mb_substr(strip_tags($a['content']), 0, 140);
             }
             unset($a);
 
             if ($activeAlert) {
-                $activeAlert['title']        = $translations['alert_title'] ?? $activeAlert['title'];
-                $activeAlert['content_trim'] = $translations['alert_desc']  ?? mb_substr(strip_tags($activeAlert['content']), 0, 120);
+                $activeAlert['title']        = $tr['alert_title'] ?? $activeAlert['title'];
+                $activeAlert['content_trim'] = $tr['alert_desc']  ?? mb_substr(strip_tags($activeAlert['content']), 0, 120);
             }
         } else {
             foreach ($announcements as &$a) {
                 $a['content_trim'] = mb_substr(strip_tags($a['content']), 0, 140);
             }
             unset($a);
+
             if ($activeAlert) {
                 $activeAlert['content_trim'] = mb_substr(strip_tags($activeAlert['content']), 0, 120);
             }
+        }
+
+        // ===== Recommandations IA pour l'alerte =====
+        $forceRegen = (bool) $this->request->getGet('regen');
+
+        $alertAdvice = null;
+        if ($activeAlert) {
+            $alertAdvice = AiAdvisor::forAlert(
+                $activeAlert['title'],
+                $activeAlert['content_trim'] ?? $activeAlert['content'],
+                $activeAlert['alert_category'] ?? 'general',
+                $lang,
+                $forceRegen
+            );
         }
 
         $items = [];
@@ -84,6 +99,13 @@ class Menu extends BaseController
             'menu'          => $menu,
             'announcements' => $announcements,
             'activeAlert'   => $activeAlert,
+            'alertAdvice'   => $alertAdvice,
         ]);
     }
+
+public function regenAlert()
+{
+    cache()->clean();
+    dd('Cache vidé. Dossier : ' . WRITEPATH . 'cache');
+}
 }

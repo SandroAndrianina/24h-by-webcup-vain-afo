@@ -15,6 +15,7 @@ class CreateAnnouncementsTable extends Migration
             'is_alert'     => ['type' => 'TINYINT', 'constraint' => 1, 'default' => 0],
             'published_at' => ['type' => 'DATETIME', 'null' => true],
             'author_id'    => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
+            'alert_category' => ['type' => 'VARCHAR', 'constraint' => 50, 'null' => true],
             'updated_at'   => ['type' => 'DATETIME', 'null' => true],
             'deleted_at'   => ['type' => 'DATETIME', 'null' => true],
         ]);
