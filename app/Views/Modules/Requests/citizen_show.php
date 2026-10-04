@@ -4,17 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= esc($request->type()->label()) ?> — TERRA NOVA</title>
+<link rel="stylesheet" href="<?= base_url('assets/css/shell.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/accordion.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/citizen.css') ?>">
+<script src="<?= base_url('assets/js/shell.js') ?>" defer></script>
 </head>
 <body>
 
-<div class="page">
-  <header class="topbar">
-    <a class="brand" href="<?= site_url('menu') ?>"><img src="<?= base_url('assets/images/logo horizontale.png') ?>" alt="TERRA NOVA"></a>
+<div class="stage">
+ <div class="shell">
+
+  <header class="top">
+    <a class="brand" href="<?= site_url('menu') ?>" aria-label="TERRA NOVA"><img src="<?= base_url('assets/images/logo horizontale.png') ?>" alt="TERRA NOVA"></a>
     <nav class="top-nav">
-      <a class="nav-button" href="<?= site_url('citoyen/requests') ?>">Mes demandes</a>
-      <a class="nav-button nav-button--accent" href="<?= site_url('logout') ?>">Déconnexion</a>
+      <a class="pill" href="<?= site_url('citoyen/requests') ?>">Mes demandes</a>
+      <a class="pill" href="<?= site_url('menu') ?>">Accueil</a>
+      <a class="pill solid" href="<?= site_url('logout') ?>">Déconnexion</a>
     </nav>
   </header>
 
@@ -26,37 +31,56 @@
     <span aria-current="page">Demande #<?= esc($request->id()) ?></span>
   </nav>
 
-  <article class="service-detail">
-    <header class="req-show__head">
-      <span class="req-badge req-badge--lg" style="--bg: <?= esc($request->status()->color()) ?>">
-        <?= esc($request->status()->label()) ?>
-      </span>
-      <span class="req-show__id">Demande #<?= esc($request->id()) ?></span>
-    </header>
+  <?php
+    $steps = [
+      'nouveau'  => ['label' => 'Reçue',    'desc' => 'Votre demande a été enregistrée.'],
+      'en_cours' => ['label' => 'En cours', 'desc' => 'Les services municipaux la traitent.'],
+      'resolu'   => ['label' => 'Résolue',  'desc' => 'Le problème a été résolu.'],
+    ];
+    $order      = array_keys($steps);
+    $current    = $request->status()->value();
+    $currentIdx = array_search($current, $order, true);
+    $progress   = $currentIdx === false ? 0 : $currentIdx;
+  ?>
 
-    <h1><?= esc($request->type()->label()) ?></h1>
+  <section class="bento req-show-bento">
+    <article class="b b--dark b--fill">
+      <header class="req-show__head">
+        <span class="req-badge req-badge--lg" style="--bg: <?= esc($request->status()->color()) ?>">
+          <?= esc($request->status()->label()) ?>
+        </span>
+        <span class="req-show__id">#<?= esc($request->id()) ?></span>
+      </header>
 
-    <?php if ($request->location()): ?>
-      <p class="req-show__loc">📍 <?= esc($request->location()) ?></p>
-    <?php endif; ?>
+      <small class="eyebrow"><?= esc($request->type()->label()) ?></small>
+      <h1 style="margin-top:14px;font-size:clamp(1.8rem,3vw,2.7rem);font-weight:400;line-height:1.05;"><?= esc($request->type()->label()) ?></h1>
 
-    <p class="req-show__desc"><?= nl2br(esc($request->description())) ?></p>
+      <?php if ($request->location()): ?>
+        <p class="req-show__loc" style="margin-top:14px;color:rgba(203,203,203,.7);"><?= esc($request->location()) ?></p>
+      <?php endif; ?>
 
-    <!-- ÉTAPES DE SUIVI -->
-    <section class="track">
-      <h2>Suivi de la demande</h2>
-      <?php
-        $steps = [
-          'nouveau'  => ['label' => 'Reçue',      'desc' => 'Votre demande a été enregistrée.'],
-          'en_cours' => ['label' => 'En cours',   'desc' => 'Les services municipaux la traitent.'],
-          'resolu'   => ['label' => 'Résolue',    'desc' => 'Le problème a été résolu.'],
-        ];
-        $current = $request->status()->value();
-        $order   = array_keys($steps);
-        $currentIdx = array_search($current, $order, true);
-      ?>
-      <ol class="track__list">
-        <?php $i = 0; foreach ($steps as $key => $info): ?>
+      <div class="track-progress" role="img" aria-label="Progression : étape <?= (int) $progress + 1 ?> sur <?= count($steps) ?>">
+        <?php foreach ($steps as $i => $info): ?>
+          <span class="track-progress__seg <?= $i <= $progress ? 'is-done' : '' ?>"></span>
+        <?php endforeach; ?>
+      </div>
+
+      <div class="req-show__actions" style="margin-top:auto;padding-top:22px;">
+        <a href="<?= site_url('citoyen/requests') ?>" class="btn btn--ghost-light">← Retour à mes demandes</a>
+      </div>
+    </article>
+
+    <article class="b b--surface b--fill">
+      <small class="eyebrow">DÉTAIL</small>
+      <h2 class="chart-headline" style="margin-top:6px;">Description</h2>
+      <p class="req-show__desc" style="margin-top:14px;"><?= nl2br(esc($request->description())) ?></p>
+    </article>
+
+    <article class="b b--acc b--fill">
+      <small class="eyebrow">SUIVI</small>
+      <h2 class="chart-headline" style="margin-top:6px;">Avancement</h2>
+      <ol class="track__list" style="margin-top:16px;">
+        <?php $i = 0; foreach ($steps as $info): ?>
           <?php
             $state = 'pending';
             if ($i < $currentIdx)      $state = 'done';
@@ -71,12 +95,10 @@
           </li>
         <?php $i++; endforeach; ?>
       </ol>
-    </section>
+    </article>
+  </section>
 
-    <div class="req-show__actions">
-      <a href="<?= site_url('citoyen/requests') ?>" class="btn-ghost">← Retour à mes demandes</a>
-    </div>
-  </article>
+ </div>
 </div>
 
 <?= view('partials/a11y_widget') ?>

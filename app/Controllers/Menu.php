@@ -95,11 +95,22 @@ class Menu extends BaseController
             'items' => $items,
         ];
 
+        $timeline = $announcementModel->getPublishedTimeline(6);
+
+        $dash = [
+            'services'     => count($items),
+            'announcements' => count($announcementModel->getAllPublished()),
+            'alert'        => $activeAlert,
+            'advice'       => $alertAdvice,
+            'timeline'     => $timeline,
+        ];
+
         return view('menu_page', [
             'menu'          => $menu,
             'announcements' => $announcements,
             'activeAlert'   => $activeAlert,
             'alertAdvice'   => $alertAdvice,
+            'dash'          => $dash,
         ]);
     }
 
