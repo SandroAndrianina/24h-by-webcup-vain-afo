@@ -4,16 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= lang('App.nav.announcements') ?> — TERRA NOVA</title>
+<link rel="stylesheet" href="<?= base_url('assets/css/shell.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/accordion.css') ?>">
+<script src="<?= base_url('assets/js/shell.js') ?>" defer></script>
 </head>
 <body>
 
-<div class="page">
-  <header class="topbar">
-    <a class="brand" href="<?= site_url('menu') ?>"><img src="<?= base_url('assets/images/logo horizontale.png') ?>" alt="TERRA NOVA"></a>
-    <nav class="top-nav">
-      <a class="nav-button" href="<?= site_url('menu') ?>"><?= lang('App.nav.home') ?></a>
-      <a class="nav-button" href="<?= site_url('announcements') ?>"><?= lang('App.nav.announcements') ?></a>
+<div class="stage">
+ <div class="shell shell--tall shell--flush">
+
+  <header class="top">
+    <a class="brand" href="<?= site_url('menu') ?>" aria-label="TERRA NOVA"><img src="<?= base_url('assets/images/logo horizontale.png') ?>" alt="TERRA NOVA"></a>
+    <nav class="top-nav" aria-label="Navigation principale">
+      <a class="pill" href="<?= site_url('menu') ?>"><?= lang('App.nav.home') ?></a>
+      <a class="pill" href="<?= site_url('announcements') ?>"><?= lang('App.nav.announcements') ?></a>
+
       <?php $currentLang = session()->get('lang') ?? 'fr'; ?>
       <a class="language-switch <?= $currentLang === 'en' ? 'is-en' : 'is-fr' ?>"
          href="<?= site_url('lang/' . ($currentLang === 'en' ? 'fr' : 'en')) ?>"
@@ -22,10 +27,12 @@
          title="<?= $currentLang === 'en' ? 'Passer en français' : 'Switch to English' ?>">
         <span class="language-switch__label" data-lang="fr">FR</span><span class="language-switch__track" aria-hidden="true"><i></i></span><span class="language-switch__label" data-lang="en">EN</span>
       </a>
+
       <?php if (session()->get('logged_in')): ?>
-        <a class="nav-button nav-button--accent" href="<?= site_url('logout') ?>"><?= lang('App.nav.logout') ?></a>
+        <a class="pill solid" href="<?= site_url('citoyen/requests') ?>">Mes demandes</a>
+        <a class="pill" href="<?= site_url('logout') ?>"><?= lang('App.nav.logout') ?></a>
       <?php else: ?>
-        <a class="nav-button nav-button--accent" href="<?= site_url('login') ?>"><?= lang('App.nav.login') ?></a>
+        <a class="pill solid" href="<?= site_url('login') ?>"><?= lang('App.nav.login') ?></a>
       <?php endif; ?>
     </nav>
   </header>
@@ -40,21 +47,39 @@
     </section>
   <?php endif; ?>
 
-  <header class="head"><h1><?= lang('App.announcements.title') ?></h1></header>
+  <section class="bento ann-bento">
+    <article class="b b--acc hero-stats">
+      <small class="eyebrow">ACTUALITÉ</small>
+      <h1>Toutes les<br><mark>annonces.</mark></h1>
+      <p><span class="live-dot"></span><?= count($announcements) ?> annonce<?= count($announcements) > 1 ? 's' : '' ?> publiée<?= count($announcements) > 1 ? 's' : '' ?></p>
+    </article>
+
+    <article class="b b--dark b--fill">
+      <div class="stat-row"><div><small class="eyebrow">RÉPARTITION</small><h2 class="chart-headline" style="margin-top:6px;">Types de service</h2></div></div>
+      <ul class="req-ring-card__legend" style="margin-top:auto;">
+        <?php foreach (array_slice($announcements, 0, 5) as $a): ?>
+          <li><i style="background: var(--acc)"></i><span><?= esc($a['title']) ?></span><b><?= esc(date('d/m', strtotime($a['published_at']))) ?></b></li>
+        <?php endforeach; ?>
+        <?php if (empty($announcements)): ?><li><i></i><span>Aucune annonce</span><b>—</b></li><?php endif; ?>
+      </ul>
+    </article>
+  </section>
 
   <ul class="news__list">
-    <?php foreach ($announcements as $a): ?>
-      <li class="news__item">
+    <?php foreach ($announcements as $i => $a): ?>
+      <li class="news__item" style="--i:<?= $i ?>">
         <a href="<?= site_url('announcements/' . $a['id']) ?>">
           <time datetime="<?= esc($a['published_at']) ?>">
             <?= esc(date('d M Y', strtotime($a['published_at']))) ?>
           </time>
           <h3><?= esc($a['title']) ?></h3>
-          <p><?= esc($a['content_trim']) ?>…</p>
+          <p><?= esc($a['content_trim'] ?? mb_substr(strip_tags($a['content']), 0, 140)) ?>…</p>
         </a>
       </li>
     <?php endforeach; ?>
   </ul>
+
+ </div>
 </div>
 
 <?= view('partials/a11y_widget') ?>

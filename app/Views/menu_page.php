@@ -4,21 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= esc($menu['name']) ?> — TERRA NOVA</title>
+<link rel="stylesheet" href="<?= base_url('assets/css/shell.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/accordion.css') ?>">
 <script>window.MENU = <?= json_encode($menu, JSON_HEX_TAG | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;</script>
 <script src="https://unpkg.com/vue@3.4.38/dist/vue.global.prod.js" defer></script>
 <script src="<?= base_url('assets/js/accordion.js') ?>" defer></script>
+<script src="<?= base_url('assets/js/shell.js') ?>" defer></script>
 </head>
 <body>
-<div id="app" class="page">
-  <header class="topbar">
+<div id="app" class="stage">
+ <div class="shell shell--tall shell--flush" :class="{ ready }">
+
+  <header class="top">
     <a class="brand" href="<?= site_url('menu') ?>" aria-label="TERRA NOVA"><img src="<?= base_url('assets/images/logo horizontale.png') ?>" alt="TERRA NOVA"></a>
     <nav class="top-nav" aria-label="Navigation principale">
-      <a class="nav-button" href="<?= site_url('menu') ?>"><?= lang('App.nav.home') ?></a>
-      <a class="nav-button" href="<?= site_url('announcements') ?>"><?= lang('App.nav.announcements') ?></a>
+      <a class="pill" href="<?= site_url('menu') ?>"><?= lang('App.nav.home') ?></a>
+      <a class="pill" href="<?= site_url('announcements') ?>"><?= lang('App.nav.announcements') ?></a>
 
       <?php if (session()->get('logged_in') && session()->get('role') === 'admin'): ?>
-        <a class="nav-button" href="<?= site_url('admin/dashboard') ?>">Administration</a>
+        <a class="pill" href="<?= site_url('admin/dashboard') ?>">Administration</a>
       <?php endif; ?>
 
       <?php $currentLang = session()->get('lang') ?? 'fr'; ?>
@@ -31,9 +35,10 @@
       </a>
 
       <?php if (session()->get('logged_in')): ?>
-        <a class="nav-button nav-button--accent" href="<?= site_url('logout') ?>"><?= lang('App.nav.logout') ?></a>
+        <a class="pill" href="<?= site_url('citoyen/requests') ?>">Mes demandes</a>
+        <a class="pill solid" href="<?= site_url('logout') ?>"><?= lang('App.nav.logout') ?></a>
       <?php else: ?>
-        <a class="nav-button nav-button--accent" href="<?= site_url('login') ?>"><?= lang('App.nav.login') ?></a>
+        <a class="pill solid" href="<?= site_url('login') ?>"><?= lang('App.nav.login') ?></a>
       <?php endif; ?>
     </nav>
   </header>
@@ -82,9 +87,47 @@
     <?php endif; ?>
   <?php endif; ?>
 
+  <section class="bento menu-bento">
+    <article class="b b--acc hero-stats">
+      <small class="eyebrow">TERRA NOVA · <?= str_pad(count($menu['items']), 2, '0', STR_PAD_LEFT) ?> SERVICES</small>
+      <h1>Choisissez<br><mark>votre service.</mark></h1>
+      <p><span class="live-dot"></span><?= $dash['announcements'] ?> annonce<?= $dash['announcements'] > 1 ? 's' : '' ?> publiée<?= $dash['announcements'] > 1 ? 's' : '' ?> · alertes <?= $dash['alert'] ? ' actives' : ' inactives' ?></p>
+    </article>
+
+    <article class="b b--bg stat b--fill">
+      <div class="stat-row"><small class="chip">CATALOGUE</small><span class="trend trend--up">100% actif</span></div>
+      <h3>Services en ligne</h3>
+      <strong class="big" data-count="<?= (int) $dash['services'] ?>" data-speed="1100">0</strong>
+      <svg class="chart chart--draw stat-chart" viewBox="0 0 240 58" preserveAspectRatio="none" role="img" aria-label="Courbe des publications"
+           data-chart="<?= esc(json_encode($dash['timeline']['series'])) ?>" data-width="240" data-height="58" data-padding="7">
+        <path class="chart-area"></path><path class="chart-line"></path>
+      </svg>
+      <ul class="stat-list">
+        <?php foreach (array_slice($dash['timeline']['series'], -3) as $offset => $count): ?>
+          <li><span><?= esc($dash['timeline']['labels'][count($dash['timeline']['series']) - 3 + $offset]) ?></span><b><?= (int) $count ?></b><small><?= $count > 0 ? 'publié' : '—' ?></small></li>
+        <?php endforeach; ?>
+      </ul>
+    </article>
+
+    <article class="b b--dark b--fill">
+      <div class="stat-row">
+        <div><small class="eyebrow">ÉDITORIAL</small><h2 class="chart-headline" style="margin-top:6px;font-size:1.2rem;font-weight:550;">Publications</h2></div>
+        <strong style="font-size:1.05rem;"><?= (int) array_sum($dash['timeline']['series']) ?></strong>
+      </div>
+      <svg class="chart chart--draw" viewBox="0 0 300 96" preserveAspectRatio="none" role="img" aria-label="Publications des six derniers mois"
+           data-chart="<?= esc(json_encode($dash['timeline']['series'])) ?>" data-width="300" data-height="96" data-padding="9"
+           style="height:96px;margin-top:auto;">
+        <path class="chart-area"></path><path class="chart-line"></path>
+      </svg>
+      <div class="chart-labels" style="color:rgba(203,203,203,.62);">
+        <?php foreach ($dash['timeline']['labels'] as $label): ?><span><?= esc($label) ?></span><?php endforeach; ?>
+      </div>
+    </article>
+  </section>
+
   <header class="head"><h1>{{ name }}</h1></header>
 
-  <nav class="acc" :style="{ '--n': items.length }" aria-label="Menu principal">
+  <div class="acc" role="group" aria-label="Menu principal">
     <button v-for="(it, i) in items" :key="it.num" type="button" class="panel"
        :class="{ on: i === active }" :style="{ '--i': i }"
        :aria-expanded="i === active" @mouseenter="active = i" @focus="active = i" @click="active = i">
@@ -97,17 +140,17 @@
         <a class="open" :href="'/services/' + it.id" @click.stop><?= lang('App.home.open') ?> <i>→</i></a>
       </span>
     </button>
-  </nav>
+  </div>
 
   <?php if (!empty($announcements)): ?>
   <section class="news" aria-label="<?= lang('App.home.latest') ?>">
     <header class="news__head">
-      <h2><?= lang('App.home.latest') ?></h2>
+      <div><small class="eyebrow">ACTUALITÉ</small><h2 style="margin-top:6px;"><?= lang('App.home.latest') ?></h2></div>
       <a class="news__all" href="<?= site_url('announcements') ?>"><?= lang('App.home.seeAll') ?> →</a>
     </header>
     <ul class="news__list">
-      <?php foreach ($announcements as $a): ?>
-        <li class="news__item">
+      <?php foreach ($announcements as $i => $a): ?>
+        <li class="news__item" style="--i:<?= $i ?>">
           <a href="<?= site_url('announcements/' . $a['id']) ?>">
             <time datetime="<?= esc($a['published_at']) ?>">
               <?= esc(date('d M Y', strtotime($a['published_at']))) ?>
@@ -120,13 +163,14 @@
     </ul>
   </section>
   <?php endif; ?>
+
+ </div>
 </div>
 
 <?= view('partials/a11y_widget') ?>
 
 <?php if ((session()->get('lang') ?? 'fr') === 'fr'): ?>
 <script>
-  // Réchauffe la version EN en arrière-plan (invisible)
   fetch('<?= site_url('prewarm/en') ?>', { credentials: 'same-origin' }).catch(()=>{});
 </script>
 <?php endif; ?>
