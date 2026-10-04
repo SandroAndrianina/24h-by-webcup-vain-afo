@@ -6,27 +6,30 @@ use CodeIgniter\Model;
 
 class RequestModel extends Model
 {
-    protected $table          = 'requests';
+    protected $table          = 'contact_messages';
     protected $primaryKey     = 'id';
-    protected $allowedFields  = [
-        'citizen_id',
-        'service_id',
-        'type',
-        'description',
-        'location',
-        'status',
-        'agent_id',
-    ];
     protected $returnType     = 'array';
     protected $useTimestamps  = true;
     protected $createdField   = 'created_at';
     protected $updatedField   = 'updated_at';
     protected $useSoftDeletes = true;
     protected $deletedField   = 'deleted_at';
+
+    protected $allowedFields = [
+        'user_id',
+        'type',
+        'category',
+        'subject',
+        'message',
+        'location',
+        'status',
+        'assigned_agent_id',
+    ];
+
     protected $validationRules = [
-        'citizen_id'  => 'required|integer',
-        'type'        => 'required|in_list[lampadaire,voirie,eau,dechets,espace_vert,autre]',
-        'description' => 'required|min_length[10]',
-        'status'      => 'required|in_list[nouveau,en_cours,resolu]',
+        'user_id'  => 'required|integer',
+        'type'     => 'required|in_list[contact,demande,signalement]',
+        'message'  => 'required|min_length[10]',
+        'status'   => 'required|in_list[nouveau,en_cours,traite]',
     ];
 }
