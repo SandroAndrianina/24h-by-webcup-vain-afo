@@ -33,3 +33,5 @@ $routes->get('lang/(:segment)', 'Locale::switch/$1');
 $routes->get('menu/regen-alert', 'Menu::regenAlert');
 
 $routes->get('prewarm/(:segment)', 'Prewarm::index/$1');
+
+require APPPATH . 'Modules/Requests/Http/Routes.php';
