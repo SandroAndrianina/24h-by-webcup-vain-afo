@@ -9,3 +9,11 @@ $routes->group('citoyen/requests', [
     $routes->post('/',     'CitizenRequestController::store');
     $routes->get('(:num)', 'CitizenRequestController::show/$1');
 });
+
+$routes->group('citoyen/contact', [
+    'filter'    => 'auth',
+    'namespace' => 'Modules\Requests\Http\Controllers',
+], function ($routes) {
+    $routes->get('/',  'CitizenContactController::new');
+    $routes->post('/', 'CitizenContactController::store');
+});
