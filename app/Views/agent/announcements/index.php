@@ -10,11 +10,18 @@
 <body>
     <?= $this->include('agent/navbar') ?>
 
-    <h1>Mes annonces</h1>
+    <main class="agent-page-shell">
+    <div class="agent-page-header">
+        <div>
+            <span class="agent-badge">Informations publiques</span>
+            <h1>Mes annonces</h1>
+        </div>
+        <a class="agent-btn" href="<?= site_url('agent/announcements/new') ?>">Créer une annonce</a>
+    </div>
 
     <?php if (session()->getFlashdata('success')): ?>
 
-        <p>
+        <p class="agent-info">
             <?= esc(session()->getFlashdata('success')) ?>
         </p>
 
@@ -22,31 +29,23 @@
 
     <?php if (session()->getFlashdata('error')): ?>
 
-        <p>
+        <p class="agent-alert">
             <?= esc(session()->getFlashdata('error')) ?>
         </p>
 
     <?php endif; ?>
 
-    <p>
-        <a href="<?= site_url('agent/announcements/new') ?>">
-            + Créer une annonce
-        </a>
-    </p>
-
-    <hr>
-
     <?php if (empty($announcements)): ?>
-
-        <p>
+        <div class="agent-empty">
             Vous n'avez encore publié aucune annonce.
-        </p>
+        </div>
 
     <?php else: ?>
 
+        <div class="agent-list">
         <?php foreach ($announcements as $announcement): ?>
 
-            <article>
+            <article class="agent-card<?= (int) $announcement['is_alert'] === 1 ? ' agent-card--alert' : '' ?>">
 
                 <h2>
                     <?= esc($announcement['title']) ?>
@@ -54,7 +53,7 @@
 
                 <?php if ((int) $announcement['is_alert'] === 1): ?>
 
-                    <strong>
+                    <strong class="agent-badge">
                         ⚠ ALERTE URGENTE
                     </strong>
 
@@ -80,15 +79,15 @@
 
             </article>
 
-            <hr>
-
         <?php endforeach; ?>
+        </div>
 
     <?php endif; ?>
 
-    <a href="<?= site_url('agent') ?>">
-        Retour au dashboard
-    </a>
+    <div class="agent-actions">
+        <a class="agent-link" href="<?= site_url('agent') ?>">Retour au dashboard</a>
+    </div>
+    </main>
 
 </body>
 </html>

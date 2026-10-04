@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détail de la demande</title>
 </head>
 
@@ -10,13 +11,18 @@
 
     <?= $this->include('agent/navbar') ?>
 
-    <main>
+    <main class="agent-page-shell">
 
-        <h1>Détail de la demande</h1>
+        <div class="agent-page-header">
+            <div>
+                <span class="agent-badge">Suivi de demande</span>
+                <h1>Détail de la demande</h1>
+            </div>
+        </div>
 
         <?php if (session()->getFlashdata('error')): ?>
 
-            <p>
+            <p class="agent-alert">
                 <?= esc(session()->getFlashdata('error')) ?>
             </p>
 
@@ -24,56 +30,42 @@
 
         <?php if (session()->getFlashdata('success')): ?>
 
-            <p>
+            <p class="agent-info">
                 <?= esc(session()->getFlashdata('success')) ?>
             </p>
 
         <?php endif; ?>
 
-        <p>
-            <strong>Type :</strong>
-            <?= esc($request->type()->label()) ?>
-        </p>
+        <div class="agent-stack">
+            <section class="agent-card">
+                <div class="agent-meta">
+                    <span class="status-pill status-pill--<?= match ($request->status()->value()) {
+                        'nouveau' => 'new',
+                        'en_cours' => 'progress',
+                        'resolu' => 'done',
+                        default => 'done',
+                    } ?>"><?= esc($request->status()->label()) ?></span>
+                    <span><?= esc($request->createdAt() ?? '') ?></span>
+                </div>
+                <h2><?= esc($request->type()->label()) ?></h2>
+                <p><strong>Description</strong></p>
+                <p><?= nl2br(esc($request->description())) ?></p>
+                <p><strong>Lieu :</strong> <?= esc($request->location() ?? 'Non précisé') ?></p>
+            </section>
 
-        <p>
-            <strong>Description :</strong>
-        </p>
+            <section class="agent-card">
+                <h2>Modifier le statut</h2>
 
-        <p>
-            <?= nl2br(esc($request->description())) ?>
-        </p>
-
-        <p>
-            <strong>Lieu :</strong>
-            <?= esc($request->location() ?? 'Non précisé') ?>
-        </p>
-
-        <p>
-            <strong>Statut actuel :</strong>
-            <?= esc($request->status()->label()) ?>
-        </p>
-
-        <p>
-            <strong>Date :</strong>
-            <?= esc($request->createdAt() ?? '') ?>
-        </p>
-
-        <hr>
-
-        <h2>Modifier le statut</h2>
-
-        <form
+                <form class="agent-form"
             method="post"
             action="<?= site_url('agent/requests/' . $request->id() . '/status') ?>"
         >
 
             <?= csrf_field() ?>
 
-            <label for="status">
-                Nouveau statut :
-            </label>
-
-            <select name="status" id="status">
+                    <div class="field">
+                        <label for="status">Nouveau statut</label>
+                        <select name="status" id="status">
 
                 <option value="nouveau">
                     Nouveau
@@ -87,19 +79,15 @@
                     Résolu
                 </option>
 
-            </select>
-
-            <button type="submit">
-                Modifier le statut
-            </button>
-
-        </form>
-
-        <hr>
-
-        <a href="<?= site_url('agent/requests') ?>">
-            Retour aux demandes
-        </a>
+                        </select>
+                    </div>
+                    <div class="agent-actions">
+                        <button type="submit">Modifier le statut</button>
+                        <a class="agent-link" href="<?= site_url('agent/requests') ?>">Retour aux demandes</a>
+                    </div>
+                </form>
+            </section>
+        </div>
 
     </main>
 

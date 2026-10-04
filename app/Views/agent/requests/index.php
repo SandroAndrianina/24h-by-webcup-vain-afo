@@ -2,85 +2,70 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demandes</title>
 </head>
-
 <body>
 
     <?= $this->include('agent/navbar') ?>
 
-    <main>
-
-        <h1>Demandes des citoyens</h1>
+    <main class="agent-page-shell">
+        <div class="agent-page-header">
+            <div>
+                <span class="agent-badge">Centre de gestion</span>
+                <h1>Demandes des citoyens</h1>
+            </div>
+        </div>
 
         <?php if (session()->getFlashdata('error')): ?>
-
-            <p>
+            <p class="agent-alert">
                 <?= esc(session()->getFlashdata('error')) ?>
             </p>
-
         <?php endif; ?>
 
         <?php if (session()->getFlashdata('success')): ?>
-
-            <p>
+            <p class="agent-info">
                 <?= esc(session()->getFlashdata('success')) ?>
             </p>
-
         <?php endif; ?>
-
-        <hr>
 
         <?php if (empty($requests)): ?>
-
-            <p>
+            <div class="agent-empty">
                 Aucune demande pour votre service.
-            </p>
-
+            </div>
         <?php else: ?>
+            <div class="agent-list">
+                <?php foreach ($requests as $request): ?>
+                    <article class="agent-card">
+                        <div class="agent-meta">
+                            <span class="status-pill status-pill--<?= match ($request->status()->value()) {
+                                'nouveau' => 'new',
+                                'en_cours' => 'progress',
+                                'resolu' => 'done',
+                                default => 'done',
+                            } ?>">
+                                <?= esc($request->status()->label()) ?>
+                            </span>
+                            <span><?= esc($request->type()->label()) ?></span>
+                            <span>•</span>
+                            <span><?= esc($request->createdAt() ?? '') ?></span>
+                        </div>
 
-            <?php foreach ($requests as $request): ?>
+                        <h2><?= esc($request->type()->label()) ?></h2>
 
-                <div>
+                        <p><?= nl2br(esc($request->description())) ?></p>
 
-                    <p>
-                        <strong>Type :</strong>
-                        <?= esc($request->type()->label()) ?>
-                    </p>
+                        <p><strong>Lieu :</strong> <?= esc($request->location() ?? 'Non précisé') ?></p>
 
-                    <p>
-                        <strong>Description :</strong>
-                        <?= esc($request->description()) ?>
-                    </p>
-
-                    <p>
-                        <strong>Lieu :</strong>
-                        <?= esc($request->location() ?? 'Non précisé') ?>
-                    </p>
-
-                    <p>
-                        <strong>Statut :</strong>
-                        <?= esc($request->status()->label()) ?>
-                    </p>
-
-                    <p>
-                        <strong>Date :</strong>
-                        <?= esc($request->createdAt() ?? '') ?>
-                    </p>
-
-                    <a href="<?= site_url('agent/requests/' . $request->id()) ?>">
-                        Voir la demande
-                    </a>
-
-                </div>
-
-                <hr>
-
-            <?php endforeach; ?>
-
+                        <div class="agent-actions">
+                            <a class="agent-link" href="<?= site_url('agent/requests/' . $request->id()) ?>">
+                                Voir la demande
+                            </a>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+            </div>
         <?php endif; ?>
-
     </main>
 
 </body>

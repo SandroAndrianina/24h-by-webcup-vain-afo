@@ -9,34 +9,38 @@
 
 <body>
 
-    <h1>Créer une annonce</h1>
+    <?= $this->include('agent/navbar') ?>
 
-    <p>
-        Agent : <?= esc($agent['name']) ?>
-    </p>
+    <main class="agent-page-shell">
+        <div class="agent-page-header">
+            <div>
+                <span class="agent-badge">Informations publiques</span>
+                <h1>Créer une annonce</h1>
+                <p>Agent : <?= esc($agent['name']) ?></p>
+            </div>
+        </div>
+
+        <section class="agent-card">
 
     <?php if (session()->getFlashdata('error')): ?>
 
-        <p>
+        <p class="agent-alert">
             <?= esc(session()->getFlashdata('error')) ?>
         </p>
 
     <?php endif; ?>
 
-    <form
+    <form class="agent-form"
         method="post"
         action="<?= site_url('agent/announcements/create') ?>"
     >
 
         <?= csrf_field() ?>
 
-        <div>
-
+        <div class="field">
             <label for="title">
                 Titre
             </label>
-
-            <br>
 
             <input
                 type="text"
@@ -49,15 +53,10 @@
 
         </div>
 
-        <br>
-
-        <div>
-
+        <div class="field">
             <label for="content">
                 Contenu
             </label>
-
-            <br>
 
             <textarea
                 id="content"
@@ -68,9 +67,7 @@
 
         </div>
 
-        <br>
-
-        <div>
+        <div class="field">
 
             <label>
 
@@ -87,15 +84,10 @@
 
         </div>
 
-        <br>
-
-        <div>
-
+        <div class="field">
             <label for="alert_category">
                 Catégorie de l'alerte
             </label>
-
-            <br>
 
             <select
                 id="alert_category"
@@ -130,25 +122,18 @@
 
         </div>
 
-        <br>
-
-        <button type="submit">
-            Publier l'annonce
-        </button>
+        <div class="agent-actions">
+            <button type="submit">Publier l'annonce</button>
+            <a class="agent-link" href="<?= site_url('agent/announcements') ?>">Retour aux annonces</a>
+        </div>
 
     </form>
 
-    <br>
-
-    <a href="<?= site_url('agent/announcements') ?>">
-        Retour aux annonces
-    </a>
-
-    <br>
-
-    <a href="<?= site_url('agent') ?>">
-        Retour au dashboard
-    </a>
+        </section>
+        <div class="agent-actions">
+            <a class="agent-link" href="<?= site_url('agent') ?>">Retour au dashboard</a>
+        </div>
+    </main>
 
 </body>
 </html>
