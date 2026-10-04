@@ -15,12 +15,31 @@
 
   <header class="top">
     <a class="brand" href="<?= site_url('admin/dashboard') ?>" aria-label="Tableau de bord TERRA NOVA"><img class="brand__logo" src="<?= base_url('assets/images/logo horizontale.png') ?>" alt="TERRA NOVA"></a>
-   <nav><button class="pill">Aperçu</button><button class="pill">Support</button></nav>
-   <div class="top-r">
-    <button class="pill">Français ▾</button>
-    <button class="pill">Compte</button>
-    <button class="pill solid">Alertes ({{ d.alerts }})</button>
-   </div>
+    <div class="top-r">
+      <a class="pill pill--icon" href="<?= site_url('menu') ?>">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 11.5 12 4l9 7.5"/>
+          <path d="M5 10v10h14V10"/>
+        </svg>
+        Site public
+      </a>
+
+      <a class="pill pill--icon" href="<?= site_url('admin/users') ?>">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+          <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-3.87 0-7 2.13-7 4.75V21h14v-2.25C19 16.13 15.87 14 12 14Z"/>
+        </svg>
+        Utilisateurs
+      </a>
+
+      <a class="pill pill--icon" href="<?= site_url('logout') ?>">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+          <path d="M16 17l5-5-5-5"/>
+          <path d="M21 12H9"/>
+        </svg>
+        Déconnexion
+      </a>
+    </div>
   </header>
 
   <main class="bento">

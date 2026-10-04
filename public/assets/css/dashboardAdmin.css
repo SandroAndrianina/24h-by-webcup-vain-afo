@@ -150,3 +150,24 @@ h2 { font-size: 1.28rem; font-weight: 550; line-height: 1.1; }
   .hero mark { background-size: 100% .72em; }
   .activity-line { stroke-dashoffset: 0; }
 }
+
+/* Enlève le soulignement sur les liens pills */
+.pill {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Style icône */
+.pill--icon svg {
+  display: block;
+}
+
+.pill {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.pill--icon svg { display: block; }
