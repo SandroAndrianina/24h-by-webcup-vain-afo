@@ -35,6 +35,7 @@ class RequestRepository implements RequestRepositoryInterface
     public function findById(int $id): ?Request
     {
         $row = $this->model->find($id);
+
         return $row ? $this->hydrate($row) : null;
     }
 
@@ -59,12 +60,88 @@ class RequestRepository implements RequestRepositoryInterface
         return array_map(fn($row) => $this->hydrate($row), $rows);
     }
 
+    /** @return Request[] */
+    public function findByService(int $serviceId): array
+    {
+        $rows = $this->model
+            ->where('service_id', $serviceId)
+            ->orderBy('created_at', 'DESC')
+            ->findAll();
+
+        return array_map(fn($row) => $this->hydrate($row), $rows);
+    }
+
+    public function countByService(int $serviceId): int
+    {
+        return $this->model
+            ->where('service_id', $serviceId)
+            ->countAllResults();
+    }
+
+    public function countByServiceAndStatus(int $serviceId, string $status): int
+    {
+        return $this->model
+            ->where('service_id', $serviceId)
+            ->where('status', $status)
+            ->countAllResults();
+    }
+
+    public function getLastSevenDaysStats(int $serviceId): array
+    {
+        $stats = [];
+
+        for ($i = 6; $i >= 0; $i--) {
+            $date = date('Y-m-d', strtotime("-$i days"));
+
+            $total = $this->model
+                ->where('service_id', $serviceId)
+                ->where('created_at >=', $date . ' 00:00:00')
+                ->where('created_at <=', $date . ' 23:59:59')
+                ->countAllResults();
+
+            $nouveau = $this->model
+                ->where('service_id', $serviceId)
+                ->where('status', 'nouveau')
+                ->where('created_at >=', $date . ' 00:00:00')
+                ->where('created_at <=', $date . ' 23:59:59')
+                ->countAllResults();
+
+            $enCours = $this->model
+                ->where('service_id', $serviceId)
+                ->where('status', 'en_cours')
+                ->where('created_at >=', $date . ' 00:00:00')
+                ->where('created_at <=', $date . ' 23:59:59')
+                ->countAllResults();
+
+            $resolu = $this->model
+                ->where('service_id', $serviceId)
+                ->where('status', 'resolu')
+                ->where('created_at >=', $date . ' 00:00:00')
+                ->where('created_at <=', $date . ' 23:59:59')
+                ->countAllResults();
+
+            $stats[] = [
+                'date' => date('d/m', strtotime($date)),
+                'total' => $total,
+                'nouveau' => $nouveau,
+                'en_cours' => $enCours,
+                'resolu' => $resolu,
+            ];
+        }
+
+        return $stats;
+    }
+
     public function updateStatus(int $id, string $status, ?int $agentId = null): bool
     {
-        $data = ['status' => $status];
+        $data = [
+            'status' => $status
+        ];
+
         if ($agentId !== null) {
             $data['agent_id'] = $agentId;
         }
+
         return (bool) $this->model->update($id, $data);
     }
 
